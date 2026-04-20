@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Remote Desktop</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <audio id="loadingAudio" src="./assets/audio/windows-loading-audio.mp3" preload="auto"></audio>
+    <audio id="errorAudio" src="./assets/audio/windows-error-audio.mp3" preload="auto"></audio>
 
     <style>
         body {
@@ -23,16 +24,73 @@
             /* iPhone Pro Max */
             max-width: 430px;
             min-height: 932px;
-            /* iPhone Pro Max */
             margin: 30px auto;
-            background-color: rgb(29, 142, 217);
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            /* iPhone Pro Max */
+
+            background-image: url("assets/images/windows-background.jpg");
+            background-size: auto 120%;
+            background-repeat: no-repeat;
+            background-position: right 69% top 0%;
+            
+            position: relative;
         }
+
+        .footer-elem {
+            width: 100%;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        .footer-time-container {
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            padding-right: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #content {
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-areas:
+                "app1 content content content"
+                "app2 content content content"
+                "content content content content"
+                "content content content content"
+                "footer footer footer footer";
+            grid-template-columns: 1fr;
+        }
+        
+        
     </style>
 
 
+    <!--     
+        <div class="footer-elem">
+            <div class="footer-menu-container">
+
+            </div>
+            <div class="footer-time-container">
+                <span class="footer-time"></span>
+            </div>
+        </div> 
+    -->
+    <button class="loadingAudio">Loading sound</button>
+    <button class="errorAudio">Error sound</button>
     <main>
 
+        <div id="content">
+
+        </div>
+
+        <div id="overlay">
+            <div id="selectionBox"></div>
+            <!-- popups -->
+        </div>
+        
     </main>
 
     <script type="module" src="remoteDesktop.js"></script>
