@@ -1,6 +1,9 @@
 
+// UTILS
 import { startClock } from "./utils/time.js";
 import { playAudio } from "./utils/playAudio.js";
+
+// FEATURES
 import { selectionMarking } from "./features/selectionMarking/selectionMarking.js";
 
 
@@ -22,6 +25,7 @@ errorAudioBtn.addEventListener("click", () => {
 });
 
 
+// Initialize
 addEventListener("DOMContentLoaded", (e) => {
     init();
 })

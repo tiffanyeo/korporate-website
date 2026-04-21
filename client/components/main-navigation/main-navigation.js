@@ -82,9 +82,9 @@ export class MainNavigation extends HTMLElement {
 
         const navBtns = ""
         
-        navBtns.addEventlistners("click", () => {
+/*         navBtns.addEventlistners("click", () => {
             // Add classlist ".active-button", ".active-arrow"
-        } )
+        } ) */
     } 
 
 
