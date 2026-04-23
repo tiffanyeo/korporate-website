@@ -53,32 +53,33 @@ export class SubNavigation extends HTMLElement{
         this.shadowRoot.innerHTML =`
         <style>
             .sub-nav{
-                width: 300px;
-                height:40px;
+                width: 330px;
+                height:30px;
                 display: flex;
                 gap: 8px;
-                margin: 0;
+                margin: 0 auto;
 
             }
 
             .sub-nav button{
-                border: 1px solid var(--color-gray-30);
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 14px;
+                margin: none;
+                border: none;
+                font-size: 12px;
                 background-color: var(--color-gray-100);
                 border-radius: 16px 16px 0 0;
-                box-shadow: inset 0 -1em 2em rgb(0 0 0 / 30%),
-                -0.1em -0.1em 0.5em rgba(0, 0, 0, 0.134);
+                box-shadow: inset 0 -0.8em 1.2em rgb(0 0 0 / 30%),
+                0.1em -0.2em 0.5em rgba(0, 0, 0, 0.211);
                 border-bottom: none;
-                min-width: 80px;
+                min-width: 50px;
                 max-width: fit-content;
                 height: 30px;
-                padding: 4px 16px;
+                padding: 4px 8px;
                 text-align: center;
             }
 
             #active{
-                 box-shadow: -0.3em -0.3em 0.5em rgba(0, 0, 0, 0.211);
+                box-shadow: 0.1em -0.2em 0.5em rgba(0, 0, 0, 0.211);
+                border: 0.1px solid var(--color-gray-100);
             }
         </style>
         <div class="sub-nav">
