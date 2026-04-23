@@ -8,11 +8,12 @@ class ValuesView extends HTMLElement{
         this.render();
     }
 
+
     render(){
         this.shadowRoot.innerHTML = `
         <style>
             #container{
-                margin: 0 30px;
+                box-sizing: 
                 background: var(--color-gray-100);
                 padding: 24px;
                 display: flex;
@@ -67,6 +68,7 @@ class ValuesView extends HTMLElement{
         
         `;
     }
+    
 
 }
 customElements.define("values-view", ValuesView);

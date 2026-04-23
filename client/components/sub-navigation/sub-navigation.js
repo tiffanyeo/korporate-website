@@ -53,11 +53,12 @@ export class SubNavigation extends HTMLElement{
         this.shadowRoot.innerHTML =`
         <style>
             .sub-nav{
+                box-sizing: border-box;
                 width: 330px;
                 height:30px;
                 display: flex;
                 gap: 8px;
-                margin: 0 auto;
+                margin: 0 30px;
 
             }
 
@@ -78,7 +79,7 @@ export class SubNavigation extends HTMLElement{
             }
 
             #active{
-                box-shadow: 0.1em -0.2em 0.5em rgba(0, 0, 0, 0.211);
+                box-shadow: 0.2em -0.3em 0.5em rgba(0, 0, 0, 0.211);
                 border: 0.1px solid var(--color-gray-100);
             }
         </style>
