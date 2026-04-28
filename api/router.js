@@ -1,42 +1,36 @@
 
-// IMPORT VIEWS
+
 // Något till fjärrdatorn
 
-class router {
+class apiRouter {
 
-    constructor() {
-        this.requestUrl = null;
-    }
+    async handleRoute(url) {
+        const path = new URL(url).pathname;
 
-    setNewURL(path) {
-        window.history.pushState({}, "", path);
-        this.handleRoute()
-    }
-
-    handleRoute() {
-
-        this.requestUrl = window.location.pathname;
-
-        switch (this.requestUrl) {
+        switch (path) {
             case "/":
             case "/home":
-                //HomeView.render();
-                console.log("RENDER HOME");
-                break;
+                return await this.serveFile("../client/index.html");
 
             case "/remoteDesktop":
-                console.log("RENDER REMOTE");
-                break;
+                return await this.serveFile("../client/views/remoteDesktop/remoteDesktop.html");
 
             default:
-                console.log("NOT FOUND");
-                break;
+                return new Response("Not found", { status: 404 });
         }
+    }
+
+    async serveFile(relativePath) {
+        const fileUrl = new URL(relativePath, import.meta.url);
+        const file = await Deno.readTextFile(fileUrl);
+
+        return new Response(file, {
+            status: 200,
+            headers: {
+                "Content-Type": "text/html"
+            }
+        });
     }
 }
 
-export const Router = new router();
-
-// Run when init and back/forward
-window.addEventListener("load", () => Router.handleRoute());
-window.addEventListener("popstate", () => Router.handleRoute());
+export const APIRouter = new apiRouter();

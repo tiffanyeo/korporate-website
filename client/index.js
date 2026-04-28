@@ -16,3 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
     ]});
 
 */
+
+import { ClientRouter } from "./router.js";
+window.addEventListener("load", () =>   ClientRouter.handleRoute());
+window.addEventListener("popstate", () => ClientRouter.handleRoute());

@@ -1,9 +1,9 @@
-import { Router } from "./router";
+import { APIRouter } from "./router.js";
 
 class server {
 
     constructor() {
-        this.router = Router;
+        this.router = APIRouter;
     }
 
     corsMiddleware(req) {
@@ -21,13 +21,27 @@ class server {
         }
         return null;
     }
-    
+
     handler() {
         Deno.serve((req) => {
-            const cors = corsMiddleware(req);
-            if (cors) return cors; // If preflight
-            return this.router.handleRoute(req.url);
-        })
+            // Preflight
+            const cors = this.corsMiddleware(req);
+            if (cors) return cors;
+            
+            // Rendering OK?
+            const result = this.router.handleRoute(req.url);
+            return this.controller(result);
+        });
+    }
+
+    controller(result) {
+        if (result) return result;
+        return new Response(null, {
+            status: 200,
+            headers: {
+                "Content-Type": "text/html"
+            }
+        });
     }
 
 }
