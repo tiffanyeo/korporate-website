@@ -9,7 +9,7 @@ class server {
     corsMiddleware(req) {
         // Handle preflight
         if (req.method === "OPTIONS") {
-            const resp = new Response(null, {
+            return new Response(null, {
                 status: 204,
                 headers: {
                     "Access-Control-Allow-Origin": "*",
@@ -17,11 +17,20 @@ class server {
                     "Access-Control-Allow-Headers": "Content-Type"
                 }
             });
-            return resp;
         }
         return null;
     }
-
+    
+    controller(result) {
+        if (result) return result;
+        return new Response(null, {
+            status: 200,
+            headers: {
+                "Content-Type": "text/html"
+            }
+        });
+    }
+    
     handler() {
         Deno.serve((req) => {
             // Preflight
@@ -31,16 +40,6 @@ class server {
             // Rendering OK?
             const result = this.router.handleRoute(req.url);
             return this.controller(result);
-        });
-    }
-
-    controller(result) {
-        if (result) return result;
-        return new Response(null, {
-            status: 200,
-            headers: {
-                "Content-Type": "text/html"
-            }
         });
     }
 
