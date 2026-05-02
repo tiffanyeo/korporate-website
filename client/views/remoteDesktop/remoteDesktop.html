@@ -8,122 +8,125 @@
 </head>
 
 <body>
-    <audio id="loadingAudio" src="./assets/audio/windows-loading-audio.mp3" preload="auto"></audio>
-    <audio id="errorAudio" src="./assets/audio/windows-error-audio.mp3" preload="auto"></audio>
-
-    <style>
-        @font-face {
-            font-family: LibreFranklin;
-            src: url("assets/fonts/regular/LibreFranklin-Regular.ttf");
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #222;
-            font-family: LibreFranklin;
-        }
-
-        main {
-            /* iPhone Pro Max */
-            max-width: 430px;
-            min-height: 932px;
-            margin: 30px auto;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-            /* iPhone Pro Max */
-
-            background-image: url("assets/images/windows-background.jpg");
-            background-size: auto 120%;
-            background-repeat: no-repeat;
-            background-position: right 69% top 0%;
-
-            position: relative;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        #content {
-            height: 100%;
-            width: 100%;
-            
-            display: grid;
-            grid-template-areas:
-                "app1 content content content"
-                "app2 content content content"
-                "content content content content"
-                "content content content content"
-                "footer footer footer footer";
-            grid-template-columns: 1fr;
-        }
-
-        #overlay {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-        }
-
-        #selectMarking {
-            position: absolute;
-            border: 1px solid #3399ff;
-            background: rgba(51, 153, 255, 0.2);
-            display: none;
-            pointer-events: none;
-            z-index: 999;
-        }
 
 
-        /* FOOTER */
-        .footer-elem {
-            width: 100%;
-            height: 40px;
-            border-top: 2px solid rgb(103, 150, 226);
-            background-color: rgb(28, 94, 200);
-            box-sizing: border-box;
-            padding: 1px 4px;
+    <audio id="loadingAudio" src="/assets/audio/windows-loading-audio.mp3" preload="auto"></audio>
 
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .footer-menu-container {
-            padding: 0 10px;
-            background-color: green;
-            border-top: 1px solid rgb(142, 205, 120);
-            border-radius: 4px 10px 10px 4px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .menu-logo {
-            width: 30px;
-            height: 30px;
-        }
-
-        .menu-p {
-            margin: 0;
-            padding-top: 2px;
-            font-weight: 900;
-            font-size: larger;
-            padding-right: 5px;
-            color: white;
-        }
-
-        .footer-time-container {
-            color: white;
-            font-size: 14px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-        }
-        
-    </style>
+    <audio id="errorAudio" src="/assets/audio/windows-error-audio.mp3">
 
 
-    <!--     
+        <style>
+            @font-face {
+                font-family: LibreFranklin;
+                src: url("/assets/fonts/regular/LibreFranklin-Regular.ttf");
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #222;
+                font-family: LibreFranklin;
+            }
+
+            main {
+                /* iPhone Pro Max */
+                max-width: 430px;
+                min-height: 932px;
+                margin: 30px auto;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                /* iPhone Pro Max */
+
+                background-image: url("/assets/images/windows-background.jpg");
+                background-size: auto 120%;
+                background-repeat: no-repeat;
+                background-position: right 69% top 0%;
+
+                position: relative;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            #content {
+                height: 100%;
+                width: 100%;
+
+                display: grid;
+                grid-template-areas:
+                    "app1 content content content"
+                    "app2 content content content"
+                    "content content content content"
+                    "content content content content"
+                    "footer footer footer footer";
+                grid-template-columns: 1fr;
+            }
+
+            #overlay {
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+            }
+
+            #selectMarking {
+                position: absolute;
+                border: 1px solid #3399ff;
+                background: rgba(51, 153, 255, 0.2);
+                display: none;
+                pointer-events: none;
+                z-index: 999;
+            }
+
+
+            /* FOOTER */
+            .footer-elem {
+                width: 100%;
+                height: 40px;
+                border-top: 2px solid rgb(103, 150, 226);
+                background-color: rgb(28, 94, 200);
+                box-sizing: border-box;
+                padding: 1px 4px;
+
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .footer-menu-container {
+                padding: 0 10px;
+                background-color: green;
+                border-top: 1px solid rgb(142, 205, 120);
+                border-radius: 4px 10px 10px 4px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .menu-logo {
+                width: 30px;
+                height: 30px;
+            }
+
+            .menu-p {
+                margin: 0;
+                padding-top: 2px;
+                font-weight: 900;
+                font-size: larger;
+                padding-right: 5px;
+                color: white;
+            }
+
+            .footer-time-container {
+                color: white;
+                font-size: 14px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+            }
+        </style>
+
+
+        <!--     
         <div class="footer-elem">
             <div class="footer-menu-container">
 
@@ -133,34 +136,34 @@
             </div>
         </div> 
     -->
-    <button class="loadingAudio">Loading sound</button>
-    <button class="errorAudio">Error sound</button>
-    <main>
-        <p>HEj är detta rätt font?</p>
-        <div id="content">
+        <button class="loadingAudio">Loading sound</button>
+        <button class="errorAudio">Error sound</button>
+        <main>
+            <p>HEj är detta rätt font?</p>
+            <div id="content">
 
 
-            <div class="footer-elem">
-                <div class="footer-menu-container">
-                    <img src="assets/icons/app-icon-windows-logo.png" alt="logo" class="menu-logo">
-                    <p class="menu-p">start</p>
+                <div class="footer-elem">
+                    <div class="footer-menu-container">
+                        <img src="/assets/icons/app-icon-windows-logo.png">
+                        <p class="menu-p">start</p>
+                    </div>
+                    <div class="footer-time-container">
+                        <span class="footer-time">00:00</span>
+                    </div>
                 </div>
-                <div class="footer-time-container">
-                    <span class="footer-time">00:00</span>
-                </div>
+
             </div>
 
-        </div>
-
-        <div id="overlay">
-            <div id="selectMarking"></div>
-            <!-- popups -->
-        </div>
+            <div id="overlay">
+                <div id="selectMarking"></div>
+                <!-- popups -->
+            </div>
 
 
-    </main>
+        </main>
 
-    <script type="module" src="./remoteDesktop.js"></script>
+        <script type="module" src="/remoteDesktop.js"></script>
 </body>
 
 </html>
