@@ -1,7 +1,7 @@
 class apiRouter {
 
     async handleRoute(url) {
-        
+
         const path = new URL(url).pathname;
 
         // HTML ROUTES
@@ -25,10 +25,12 @@ class apiRouter {
 
 
     async serveFile(relativePath) {
-        
+
         // HTML OK
         const fileUrl = new URL(relativePath, import.meta.url);
+        console.log("SERVE FILE PATH:", fileUrl);
         const file = await Deno.readTextFile(fileUrl);
+        console.log("FILE CONTENT LENGTH:", file.length);
 
         return new Response(file, {
             status: 200,
@@ -38,7 +40,7 @@ class apiRouter {
 
 
     async serveStatic(path) {
-        
+
         // STATIC OK
         const fileUrl = new URL("../client" + path, import.meta.url);
 
@@ -68,7 +70,7 @@ class apiRouter {
         if (path.endsWith(".mp3")) return "audio/mpeg";
         if (path.endsWith(".ttf")) return "font/ttf";
         if (path.endsWith(".ico")) return "image/x-icon";
-        return null; 
+        return null;
     }
 }
 

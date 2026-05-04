@@ -1,29 +1,33 @@
-import { APIRouter } from "../api/router";
 
 class clientRouter {
 
     setNewURL(path) {
+        console.log("CLIENT ROUTER PATH:", path)
         window.history.pushState({}, "", path);
         this.handleRoute();
     }
 
+
+
     handleRoute() {
+        
         const path = window.location.pathname;
+        console.log("CLIENT ROUTER PATH:", path)
         switch (path) {
             case "/":
             case "/home":
-                setNewURL(path);
+            this.setNewURL(path);
                 console.log("FRONTEND: render home");
                 // HomeView.render();
                 break;
 
             case "/remoteDesktop":
-                setNewURL(path);
+                this.setNewURL(path);
                 console.log("FRONTEND: render remote");
                 break;
 
             default:
-                setNewURL(path);
+                this.setNewURL(path);
                 console.log("FRONTEND: not found");
                 break;
         }
@@ -33,5 +37,5 @@ class clientRouter {
 export const ClientRouter = new clientRouter();
 
 // Run when init and back/forward
-window.addEventListener("load", () => Router.handleRoute());
-window.addEventListener("popstate", () => Router.handleRoute());
+window.addEventListener("load", () => ClientRouter.handleRoute());
+window.addEventListener("popstate", () => ClientRouter.handleRoute());

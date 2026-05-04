@@ -20,9 +20,11 @@ class server {
         }
         return null;
     }
-    
+
     controller(result) {
-        if (result) return result;
+        
+        if (result instanceof Response) return result;
+
         return new Response(null, {
             status: 200,
             headers: {
@@ -30,15 +32,17 @@ class server {
             }
         });
     }
-    
-    handler() {
-        Deno.serve((req) => {
+
+    async handler() {
+        Deno.serve(async (req) => {
             // Preflight
             const cors = this.corsMiddleware(req);
             if (cors) return cors;
-            
+
             // Rendering OK?
-            const result = this.router.handleRoute(req.url);
+            const result = await this.router.handleRoute(req.url);
+            console.log("ROUTER RESULT:", this.router.handleRoute(req.url));
+
             return this.controller(result);
         });
     }
