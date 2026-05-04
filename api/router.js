@@ -5,12 +5,12 @@ class apiRouter {
         const path = new URL(url).pathname;
 
         // HTML ROUTES
-        if (path === "/" || path === "/home") return await this.serveFile("../client/index.html");
-        if (path === "/remoteDesktop") return await this.serveFile("../client/views/remoteDesktop/remoteDesktop.html");
+        if (path.startsWith("/home")) return await this.serveFile("../client/index.html");
+        if (path.startsWith("/remoteDesktop")) return await this.serveFile("../client/views/remoteDesktop/remoteDesktop.html");
 
         // STATIC FILES
         if (
-            path.startsWith("/assets/") ||
+            path.startsWith("/views/assets/") ||
             path.endsWith(".js") ||
             path.endsWith(".css") ||
             path.endsWith(".png") ||
@@ -20,7 +20,7 @@ class apiRouter {
         ) return await this.serveStatic(path);
 
         // DEFAULT 
-        return new Response("Not found", { status: 404 });
+        return new Response("Page Not Found", { status: 404 });
     }
 
 
@@ -28,9 +28,7 @@ class apiRouter {
 
         // HTML OK
         const fileUrl = new URL(relativePath, import.meta.url);
-        console.log("SERVE FILE PATH:", fileUrl);
         const file = await Deno.readTextFile(fileUrl);
-        console.log("FILE CONTENT LENGTH:", file.length);
 
         return new Response(file, {
             status: 200,
@@ -40,6 +38,8 @@ class apiRouter {
 
 
     async serveStatic(path) {
+
+        console.log("STATIC REQUEST:", path);
 
         // STATIC OK
         const fileUrl = new URL("../client" + path, import.meta.url);
@@ -64,6 +64,9 @@ class apiRouter {
 
 
     getMime(path) {
+        
+        console.log("MIME CHECK:", path);
+
         if (path.endsWith(".js")) return "application/javascript";
         if (path.endsWith(".css")) return "text/css";
         if (path.endsWith(".png")) return "image/png";

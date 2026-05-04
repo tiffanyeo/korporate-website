@@ -10,24 +10,22 @@ class clientRouter {
 
 
     handleRoute() {
-        
+        console.log("HANDLE ROUTE START");
+
         const path = window.location.pathname;
         console.log("CLIENT ROUTER PATH:", path)
         switch (path) {
             case "/":
             case "/home":
-            this.setNewURL(path);
                 console.log("FRONTEND: render home");
                 // HomeView.render();
                 break;
 
             case "/remoteDesktop":
-                this.setNewURL(path);
                 console.log("FRONTEND: render remote");
                 break;
 
             default:
-                this.setNewURL(path);
                 console.log("FRONTEND: not found");
                 break;
         }

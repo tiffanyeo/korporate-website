@@ -41,8 +41,6 @@ class server {
 
             // Rendering OK?
             const result = await this.router.handleRoute(req.url);
-            console.log("ROUTER RESULT:", this.router.handleRoute(req.url));
-
             return this.controller(result);
         });
     }
