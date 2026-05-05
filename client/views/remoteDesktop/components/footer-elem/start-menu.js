@@ -1,4 +1,4 @@
-import { MenuPopup } from "../menu-popup";
+import { MenuPopup } from "../menu-popup/menu-popup.js";
 
 export class StartMenu extends HTMLElement{
     constructor(){
@@ -8,8 +8,26 @@ export class StartMenu extends HTMLElement{
 
     connectedCallback(){
         this.render();
+        this.setEList();
     }
 
+    setEList(){
+        let click = 0;
+        const start = this.shadowRoot.querySelector(".start-menu");
+        const parent = this.parentNode;
+        const menupop = document.createElement("menu-popup")
+        start.addEventListener("click", () =>{
+            if (click == 0){
+                parent.appendChild(menupop);
+                click++;
+            } else {
+                click = 0;
+                parent.removeChild(menupop);
+            }
+
+        })
+
+    }
 
 
     render(){
