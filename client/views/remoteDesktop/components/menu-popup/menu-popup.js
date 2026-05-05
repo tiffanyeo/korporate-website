@@ -25,7 +25,11 @@ export class MenuPopup extends HTMLElement{
                 box-shadow: 0 30px 20px rgba(0, 0, 0, 0.18)
             }
             .menu-border{
+                display:flex;
+                align-items: center;
                 padding: 7px 8px;
+                gap: 8px;
+                color: white;
                 background: linear-gradient(180deg,
                     rgba(9, 151, 255, 1) 0%,
                     rgba(0, 83, 238, 1) 8%,
@@ -35,6 +39,10 @@ export class MenuPopup extends HTMLElement{
                     rgba(0, 91, 255, 1) 95%,
                     rgba(0, 61, 215, 1) 96%,
                     rgba(0, 61, 215, 1) 100%);
+            }
+            .menu-top h5{
+                margin: 0;
+                text-shadow:1px 1px 3px rgba(0,0,0,.6);
             }
             .user-icon{
                 width: 40px;
@@ -52,10 +60,9 @@ export class MenuPopup extends HTMLElement{
                 flex-grow: 2;
             }
             .menu-bottom{
-                
-                display: flex;
-                gap: 8px;
                 justify-content: flex-end;
+                gap: 16px;
+                height: 26px;
             }
 
             .menu-btm-btn{
@@ -71,11 +78,14 @@ export class MenuPopup extends HTMLElement{
             .menu-btm-btn p{
                 margin: 0;
                 color: white;
-                font-size: 11px;
+                font-size: 12px;
                 font-weight: lighter;
             }
             .btn-wrapper{
+                height: 24px;
+                width: 24px;
                 position: relative;
+                align-self: center;
                 display: inline-block;
             }
             .hover-overlay{
@@ -113,8 +123,8 @@ export class MenuPopup extends HTMLElement{
         <div id="menu">
             <div class="menu-top menu-border">
                 <div class="user-icon">
-                    
                 </div>
+                <h5>Carl Nielsen</h5>
             </div>
             <div class="menu-middle">
                 <div class="menu-middle-column" id="menu-middle-left"></div>
