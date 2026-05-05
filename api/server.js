@@ -33,7 +33,7 @@ class server {
         });
     }
 
-    async handler() {
+    handler() {
         Deno.serve(async (req) => {
             // Preflight
             const cors = this.corsMiddleware(req);
