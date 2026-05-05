@@ -15,13 +15,14 @@ export class MenuPopup extends HTMLElement{
             #menu {
                 display: flex;
                 flex-direction: column;
-                z-index: 1000;
+                z-index: 100;
                 position: absolute;
                 background-color: white;
                 width: 300px;
                 height: 400px;
                 bottom:40px;
                 left: 0;
+                box-shadow: 0 30px 20px rgba(0, 0, 0, 0.18)
             }
             .menu-border{
                 padding: 7px 8px;
@@ -38,10 +39,13 @@ export class MenuPopup extends HTMLElement{
             .user-icon{
                 width: 40px;
                 height: 40px;
-                background-image: url(views/remoteDesktop/assets/icons/Korporate-Symbol-1.png);
+                background-image: url(views/remoteDesktop/assets/icons/chess.jpeg);
                 background-size: cover;
                 background-position: center;
                 border-radius: 2px;
+                border: 1px solid white;
+                box-shadow: 1px 1px 4px rgba(0,0,0,0.4),
+                    inset -1px -1px 2px rgba(0,0,0,0.4);
             }
             .menu-middle{
                 display: flex;
@@ -97,7 +101,8 @@ export class MenuPopup extends HTMLElement{
                 z-index: 10;
                 width: 320px;
                 border-right: 0.5px solid rgba(0, 0, 0, 0.52);
-                box-shadow: 1px 0 1px rgba(0, 0, 0, 0.23);
+                box-shadow: 1px 0 1px rgba(0, 0, 0, 0.23),
+                            inset -1px 0 1px #e6faff;
             }
             #menu-middle-right{
                 width: 280px;

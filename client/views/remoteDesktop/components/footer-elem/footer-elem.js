@@ -71,7 +71,7 @@ export class FooterElem extends HTMLElement{
                     border-left: 2px groove rgba(25, 183, 246, 0.64);
 
                     box-shadow:
-                        0 -2px 4px rgba(0,0,0,0.4);
+                        0 -2px 4px rgba(0,0,0,0.4),
                         inset 0px 12px 4px rgb(25, 185, 246);
                     background: linear-gradient(180deg,
                     rgb(11, 160, 234) 0%,
