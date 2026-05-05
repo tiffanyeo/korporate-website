@@ -14,12 +14,17 @@
             font-family: LibreFranklin;
             src: url("/views/assets/fonts/regular/LibreFranklin-Regular.ttf");
         }
+            @font-face {
+            font-family: LibreFranklinBold;
+            src: url("/views/assets/fonts/regular/LibreFranklin-Bold.ttf");
+        }
 
         body {
             margin: 0;
             padding: 0;
             background-color: #222;
             font-family: LibreFranklin;
+            cursor: arrow;
         }
 
         main {
@@ -30,7 +35,7 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
             /* iPhone Pro Max */
 
-            background-image: url("/views/assets/images/windows-background.jpg");
+            background-image: url("/views/remoteDesktop/assets/images/windows-background.jpg");
             background-size: auto 120%;
             background-repeat: no-repeat;
             background-position: right 69% top 0%;
@@ -127,17 +132,6 @@
 
     <audio id="loadingAudio" src="/views/assets/audio/windows-loading-audio.mp3" preload="auto"></audio>
     <audio id="errorAudio" src="/views/assets/audio/windows-error-audio.mp3"></audio>
-
-    <!--     
-        <div class="footer-elem">
-            <div class="footer-menu-container">
-
-            </div>
-            <div class="footer-time-container">
-                <span class="footer-time"></span>
-            </div>
-        </div> 
-    -->
         
     <button class="loadingAudio">Loading sound</button>
     <button class="errorAudio">Error sound</button>

@@ -16,7 +16,7 @@ export class FooterElem extends HTMLElement{
 
         const update = () => {
             const now = new Date();
-            clockEl.textContent = now.toLocaleTimeString("en-US", {
+            clockEl.textContent = now.toLocaleTimeString([], {
                 hour: "2-digit",
                 minute: "2-digit"
             })

@@ -16,7 +16,8 @@ class apiRouter {
             path.endsWith(".png") ||
             path.endsWith(".mp3") ||
             path.endsWith(".ttf") ||
-            path.endsWith(".ico")
+            path.endsWith(".ico") ||
+            path.endsWith(".jpg") || path.endsWith(".jpeg")
         ) return await this.serveStatic(path);
 
         // DEFAULT 
@@ -73,6 +74,7 @@ class apiRouter {
         if (path.endsWith(".mp3")) return "audio/mpeg";
         if (path.endsWith(".ttf")) return "font/ttf";
         if (path.endsWith(".ico")) return "image/x-icon";
+        if (path.endsWith(".jpg") || path.endsWith(".jpeg")) return "image/jpeg";
         return null;
     }
 }
