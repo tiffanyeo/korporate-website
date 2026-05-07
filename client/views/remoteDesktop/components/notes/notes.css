@@ -53,24 +53,26 @@
         }
     }
     button[aria-label="Minimize"] {
-        background-image: url(../../assets/icons/MinimizeWindow.png);
+        background-image: url(../../../assets/icons/MinimizeWindow.png);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
     button[aria-label="Maximize"] {
-        background-image: url(../../assets/icons/MaximizeWindow.png);
+        background-image: url(../../../assets/icons/MaximizeWindow.png);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
     button[aria-label="Close"] {
-        background-image: url(../../assets/icons/CloseWindow.png);
+        background-image: url(../../../assets/icons/CloseWindow.png);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 }
+
+
 
 .window-menu{
     
@@ -101,6 +103,7 @@
 
 textarea{
     min-width: 180px;
+    max-width: 400px;
 }
 
 .status-bar {
