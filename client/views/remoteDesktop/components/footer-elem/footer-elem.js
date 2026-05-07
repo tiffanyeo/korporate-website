@@ -1,12 +1,12 @@
 import { StartMenu } from "./start-menu.js"
 
-export class FooterElem extends HTMLElement{
-    constructor(){
+export class FooterElem extends HTMLElement {
+    constructor() {
         super();
-        this.attachShadow({mode: "open"});
+        this.attachShadow({ mode: "open" });
     }
 
-    connectedCallback(){
+    connectedCallback() {
         this.render();
         this.startClock();
     }
@@ -25,7 +25,7 @@ export class FooterElem extends HTMLElement{
         this.interval = setInterval(update, 1000);
     }
 
-    render(){
+    render() {
         this.shadowRoot.innerHTML = `
             <style>
                 :host {
@@ -36,10 +36,11 @@ export class FooterElem extends HTMLElement{
                     padding: 0;
                 }
 
-                .footer-elem{
+                .footer-elem {
                     margin: 0;
                     width: 100%;
                     height: 40px;
+                    z-index: 1000;
                     background-color: rgb(30, 96, 232);
                     background: linear-gradient(180deg,
                         rgba(9, 151, 255, 1) 0%,
@@ -98,7 +99,7 @@ export class FooterElem extends HTMLElement{
                     <start-menu></start-menu>
                 </div>
                 <div class="footer-right">
-                    <img class="footer-icon" src="/views/remoteDesktop/assets/icons/antivirus.png">
+                    <img class="footer-icon" src="/views/assets/icons/antivirus.png">
                     <span id="clock">00:00</span>
                 </div>
             </div>

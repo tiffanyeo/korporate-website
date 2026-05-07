@@ -15,7 +15,7 @@ export class MenuPopup extends HTMLElement{
             #menu {
                 display: flex;
                 flex-direction: column;
-                z-index: 100;
+                z-index: 1000;
                 position: absolute;
                 background-color: white;
                 width: 300px;
@@ -47,7 +47,7 @@ export class MenuPopup extends HTMLElement{
             .user-icon{
                 width: 40px;
                 height: 40px;
-                background-image: url(views/remoteDesktop/assets/icons/chess.jpeg);
+                background-image: url(views/assets/icons/chess.jpeg);
                 background-size: cover;
                 background-position: center;
                 border-radius: 2px;
@@ -133,14 +133,14 @@ export class MenuPopup extends HTMLElement{
             <div class="menu-bottom menu-border">
                 <div class="menu-btm-btn">
                     <div class="btn-wrapper">
-                        <img src="/views/remoteDesktop/assets/icons/LogOff.png">
+                        <img src="/views/assets/icons/LogOff.png">
                         <div class="hover-overlay"></div>
                     </div>
                     <p>Log Off</p>
                 </div>
                 <div class="menu-btm-btn">
                     <div class="btn-wrapper">
-                        <img src="/views/remoteDesktop/assets/icons/ShutDown.png">
+                        <img src="/views/assets/icons/ShutDown.png">
                         <div class="hover-overlay"></div>
                     </div>
                     <p>Shut Down</p>
