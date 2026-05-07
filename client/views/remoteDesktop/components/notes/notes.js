@@ -1,15 +1,15 @@
 import sheet from "./notes.css" with {type: "css"};
-import variables from "../../assets/styles/variables.css" with {type: "css"};
 
 export class NotesApp extends HTMLElement{
     constructor(){
         super();
         this.attachShadow({mode: "open"});
-        this.shadowRoot.adoptedStyleSheets = [sheet], [variables];
     }
 
     connectedCallback(){
         this.render();
+
+        this.shadowRoot.adoptedStyleSheets = [sheet];
         this.setElistener();
     }
 
@@ -17,7 +17,22 @@ export class NotesApp extends HTMLElement{
         const mini = this.shadowRoot.querySelector("#minimize");
         const maxi = this.shadowRoot.querySelector("#maximize");
         const close = this.shadowRoot.querySelector("#close");
-        ///fixar detta sen
+
+        const window = this.shadowRoot.querySelector("#notes");
+        
+        close.addEventListener("click", () => {
+            this.remove();
+        })
+
+        mini.addEventListener("click", ()=>{
+            this.classList.toggle("minimized")
+        })
+
+        maxi.addEventListener("click", ()=>{
+            this.classList.toggle("maximized")
+        })
+
+
 
     }
     render(){
@@ -29,9 +44,9 @@ export class NotesApp extends HTMLElement{
                     <div class="title-bar">
                         <div class="title-bar-text">Untitled - Notepad</div>
                         <div class="title-bar-controls">
-                            <button aria-label="Minimize"><div></div></button>
-                            <button aria-label="Maximize"></button>
-                            <button aria-label="Close"></button>
+                            <button id="minimize"aria-label="Minimize"><div></div></button>
+                            <button id="maximize"aria-label="Maximize"></button>
+                            <button id="close"aria-label="Close"></button>
                         </div>
                     </div>
                     <div class="window-menu">

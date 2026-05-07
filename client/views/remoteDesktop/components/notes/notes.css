@@ -4,16 +4,15 @@
     font-size: 11px;
     border: 2px solid rgba(0, 102, 255, 1);
     background: lightblue;
-    padding: 0, 3px;
     display: flex;
     flex-direction: column;
     border-radius: 4px;
-    fieldset {
-        margin-bottom: 9px;
-    };
-   
-    
 }
+
+.window fieldset {
+    margin-bottom: 9px;
+}
+
 .title-bar {
     
     font-size: 11px;
@@ -41,44 +40,44 @@
 .title-bar-controls {
     display: flex;
     gap: 2px;
-    button {
-        padding: 0;
-        display: block;
-        min-width: 14px;
-        min-height: 14px;
-        border: white;
-        border-radius: 2px;
-        &:focus {
-            outline: none;
-        }
-    }
-    button[aria-label="Minimize"] {
-        background-image: url(../../../assets/icons/MinimizeWindow.png);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    button[aria-label="Maximize"] {
-        background-image: url(../../../assets/icons/MaximizeWindow.png);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    button[aria-label="Close"] {
-        background-image: url(../../../assets/icons/CloseWindow.png);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+}
+
+.title-bar-controls button {
+    padding: 0;
+    display: block;
+    min-width: 14px;
+    min-height: 14px;
+    border: white;
+    border-radius: 2px;
+}
+
+.title-bar-controls button:focus {
+    outline: none;
+}
+
+button[aria-label="Minimize"] {
+    background-image: url(../../../assets/icons/MinimizeWindow.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+button[aria-label="Maximize"] {
+    background-image: url(../../../assets/icons/MaximizeWindow.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+button[aria-label="Close"] {
+    background-image: url(../../../assets/icons/CloseWindow.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
-
 .window-menu{
-    
     padding: 2px 4px;
     background: #dfdfdf;
-    border-bottom: 0.5px solid #808080;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.18);
     display: flex;
     gap: 8px;
@@ -87,24 +86,22 @@
 
 .window-menu-item {
     font-size: 10px;
-
 }
 
 .window-body {
     overflow: clip;
     flex-grow: 1;
-    /*fixa detta*/
-    border:rgba(0, 61, 215, 1);
-    pre {
-        margin: -8px;
-    }
-    
+    border: rgb(0, 61, 215);
+}
+
+.window-body pre {
+    margin: -8px;
 }
 
 textarea{
+    border: 0.5px solid #808080;
     min-width: 180px;
     max-width: 400px;
-
 }
 
 
@@ -119,4 +116,16 @@ textarea{
     flex-grow: 1;
     padding: 2px 3px;
     margin: 0;
+}
+
+
+:host(.maximized) #notes {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+:host(.minimized) #notes {
+    height: 30px;
+    overflow: hidden;
 }
