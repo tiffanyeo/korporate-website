@@ -1,8 +1,8 @@
 
 export function selectionMarking() {
 
-    const markingBox = document.getElementById("selectMarking");
     const main = document.querySelector("main");
+    const markingBox = document.getElementById("selectMarking");
 
     let startX = 0;
     let startY = 0;

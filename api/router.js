@@ -40,7 +40,7 @@ class apiRouter {
 
     async serveStatic(path) {
 
-        console.log("STATIC REQUEST:", path);
+        // console.log("STATIC REQUEST:", path);
 
         // STATIC OK
         const fileUrl = new URL("../client" + path, import.meta.url);
@@ -66,7 +66,7 @@ class apiRouter {
 
     getMime(path) {
         
-        console.log("MIME CHECK:", path);
+        // console.log("MIME CHECK:", path);
 
         if (path.endsWith(".js")) return "application/javascript";
         if (path.endsWith(".css")) return "text/css";
