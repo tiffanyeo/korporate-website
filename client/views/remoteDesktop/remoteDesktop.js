@@ -6,6 +6,7 @@ import { playAudio } from "./utils/playAudio.js";
 // FEATURES
 import { FooterElem } from "./components/footer-elem/footer-elem.js"
 import { selectionMarking } from "./features/selectionMarking/selectionMarking.js";
+import { NotesApp } from "./components/notes/notes.js";
 
 
 function init() {

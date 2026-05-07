@@ -1,0 +1,117 @@
+.window {
+    margin: 8px;
+    width: fit-content;
+    font-size: 11px;
+    border: 2px solid rgba(0, 102, 255, 1);
+    background: lightblue;
+    padding: 0, 3px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    fieldset {
+        margin-bottom: 9px;
+    };
+   
+    
+}
+.title-bar {
+    
+    font-size: 11px;
+    background: linear-gradient(180deg,
+                    rgba(9, 151, 255, 1) 0%,
+                    rgba(0, 83, 238, 1) 8%,
+                    rgba(0, 80, 238, 1) 40%,
+                    rgba(0, 102, 255, 1) 88%,
+                    rgba(0, 102, 255, 1) 93%,
+                    rgba(0, 91, 255, 1) 95%,
+                    rgba(0, 61, 215, 1) 96%,
+                    rgba(0, 61, 215, 1) 100%);
+    padding: 3px 2px 3px 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.title-bar-text {
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0;
+    margin-right: 24px;
+}
+.title-bar-controls {
+    display: flex;
+    gap: 2px;
+    button {
+        padding: 0;
+        display: block;
+        min-width: 14px;
+        min-height: 14px;
+        border: white;
+        border-radius: 2px;
+        &:focus {
+            outline: none;
+        }
+    }
+    button[aria-label="Minimize"] {
+        background-image: url(../../assets/icons/MinimizeWindow.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    button[aria-label="Maximize"] {
+        background-image: url(../../assets/icons/MaximizeWindow.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    button[aria-label="Close"] {
+        background-image: url(../../assets/icons/CloseWindow.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.window-menu{
+    
+    padding: 2px 4px;
+    background: #dfdfdf;
+    border-bottom: 0.5px solid #808080;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.18);
+    display: flex;
+    gap: 8px;
+
+}
+
+.window-menu-item {
+    font-size: 10px;
+
+}
+
+.window-body {
+    overflow: clip;
+    flex-grow: 1;
+    /*fixa detta*/
+    border:rgba(0, 61, 215, 1);
+    pre {
+        margin: -8px;
+    }
+    
+}
+
+textarea{
+    min-width: 180px;
+}
+
+.status-bar {
+    margin: 0px 1px;
+    display: flex;
+    gap: 1px;
+}
+
+.status-bar-field {
+    box-shadow: inset -1px -1px;
+    flex-grow: 1;
+    padding: 2px 3px;
+    margin: 0;
+}
