@@ -65,7 +65,7 @@ class apiRouter {
 
 
     getMime(path) {
-        
+
         // console.log("MIME CHECK:", path);
 
         if (path.endsWith(".js")) return "application/javascript";
