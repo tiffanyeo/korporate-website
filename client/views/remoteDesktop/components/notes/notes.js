@@ -43,7 +43,7 @@ export class NotesApp extends HTMLElement{
                     </div>
                     <div class="window-body">
                     <div id="input-box">
-                        <textarea name="" id="addText" cols="38" rows="10" placeholder="I"></textarea>
+                        <textarea name="" id="addText" cols="38" rows="10" placeholder=""></textarea>
                     </div>
                   </div>
                 </div>
