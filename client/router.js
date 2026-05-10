@@ -2,32 +2,30 @@
 class clientRouter {
 
     setNewURL(path) {
-        console.log("CLIENT ROUTER PATH:", path)
-        window.history.pushState({}, "", path);
-        this.handleRoute();
+
+        const currURL = window.location.pathname;
+
+        // SPA (index.html)
+        if (currURL.includes(path)) {
+            window.history.pushState({}, "", path);
+            return;
+        } else {
+            
+            // ROUTING IMBETWEEN (index.html/remoteDesktop.html)
+            window.history.pushState({}, "", path);
+            //fetch(path);
+            fetch("https://en.wikipedia.org/wiki/Main_Page");
+            this.handleRoute(path);
+        }
+
     }
 
 
 
-    handleRoute() {
 
-        const path = window.location.pathname;
-        // console.log("CLIENT ROUTER PATH:", path)
-        switch (path) {
-            case "/":
-            case "/home":
-                //console.log("FRONTEND: render home");
-                // HomeView.render();
-                break;
+    handleRoute(href) {
 
-            case "/remoteDesktop":
-                //console.log("FRONTEND: render remote");
-                break;
-
-            default:
-                //console.log("FRONTEND: not found");
-                break;
-        }
+        if (href) window.location.href = href;
     }
 }
 

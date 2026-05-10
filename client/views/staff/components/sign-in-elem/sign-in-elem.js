@@ -99,10 +99,10 @@ export class SignInElem extends HTMLElement {
             const path = "/remoteDesktop";
             const employee = this.shadowRoot.querySelector("#employee").value;
             const pwd = this.shadowRoot.querySelector("#pwd").value;
-            console.log(employee, pwd)
+            console.log("Signed in with:", employee, pwd)
             
             if (employee == "carl" && pwd == "PWD") {
-                console.log(path)
+                console.log("Call ClientRouter with", path)
                 ClientRouter.setNewURL(path);
                 //
             }

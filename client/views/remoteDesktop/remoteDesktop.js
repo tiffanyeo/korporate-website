@@ -10,7 +10,7 @@ import { NotesApp } from "./components/notes/notes.js";
 
 
 function init() {
-    // playAudio.loading();
+    playAudio.loading();
     selectionMarking();
     startClock();
 }
