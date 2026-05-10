@@ -1,56 +1,70 @@
 /*
-Exempel på hur man använder sub-navigationen
-<sub-navigation id="myNav"></sub-navigation>
+    Exempel på hur man använder sub-navigationen
+    <sub-navigation id="myNav"></sub-navigation>
 
-<script>
-  document.getElementById('myNav').buttons = [
-    { title: 'Start', href: '/' },
-    { title: 'Blogg', href: '/blogg' },
-    { title: 'Om oss', href: '/om' }
-  ]
-</script>
+    <script>
+    document.getElementById('myNav').buttons = [
+        { title: 'Start', href: '/' },
+        { title: 'Blogg', href: '/blogg' },
+        { title: 'Om oss', href: '/om' }
+    ]
+    </script>
+    
+    --
+    Read active btn with:
+    const nav = this.shadowRoot.querySelector("#myNav");
+    nav.activeBtn;
 */
 
 
 
-export class SubNavigation extends HTMLElement{
-    constructor(){
+export class SubNavigation extends HTMLElement {
+    constructor() {
         super();
         this.attachShadow({ mode: "open" });
         this._buttons = [];
-
+        this._activeIndex = 0;
     }
 
-    set buttons(value){
+    set buttons(value) {
         this._buttons = value;
         this.render();
         this.eListeners();
     }
 
-    renderButtons(){
-        if (!this._buttons) return "";
-        return this._buttons
-        .map((link, index) =>
-            `<button ${index === 0 ? 'id="active"' : ''}>${link.title}</button>`
-        )
-        .join("");
+    get activeBtn() {
+        return this._buttons[this._activeIndex];
     }
 
-    connectedCallback(){
+    renderButtons() {
+        if (!this._buttons) return "";
+        return this._buttons
+            .map((link, index) =>
+                `<button ${index === 0 ? 'id="active"' : ''}>${link.title}</button>`
+            )
+            .join("");
+    }
+
+    connectedCallback() {
         this.render();
         this.eListeners();
     }
 
-    eListeners(){
-        let buttons = this.shadowRoot.querySelectorAll("button");
-        buttons.forEach(btn => btn.addEventListener("click", (e) => {
-            buttons.forEach(btn => btn.removeAttribute("id"));
-            e.target.id = "active";
-            //byt innehåll
-        }))
+    eListeners() {
+        const buttons = this.shadowRoot.querySelectorAll("button");
+        buttons.forEach((btn, index) => {
+            btn.addEventListener("click", (e) => {
+                buttons.forEach(btn => btn.removeAttribute("id"));
+                e.target.id = "active";
+                // To render new content
+                this._activeIndex = index;
+            });
+        });
+
     };
-    render(){
-        this.shadowRoot.innerHTML =`
+
+    render() {
+        this.shadowRoot.innerHTML = `
         <style>
             .sub-nav{
                 box-sizing: border-box;
@@ -88,6 +102,7 @@ export class SubNavigation extends HTMLElement{
         </div> 
         `;
     }
+
 }
 
 customElements.define("sub-navigation", SubNavigation);
