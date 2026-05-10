@@ -1,16 +1,19 @@
 class clientRouter {
+    
     setNewURL(path) {
         window.history.pushState({}, "", path);
         this.handleRoute();
     }
 
     handleRoute() {
+        
         const path = window.location.pathname;
-        const content = document.getElementById("content");
-        if (!content) return;
 
         if (path.startsWith("/home")) {
             switch (path) {
+                case "/home":
+                    content.innerHTML = "<about-view></about-view>";
+                    break;
                 case "/home/about":
                     content.innerHTML = "<about-view></about-view>";
                     break;

@@ -1,24 +1,25 @@
 import "./values.js"
 
-class AboutView extends HTMLElement{
-    constructor(){
+class AboutView extends HTMLElement {
+    constructor() {
         super();
         this.attachShadow({ mode: "open" });
     }
 
-    connectedCallback(){
+    connectedCallback() {
         this.render();
     }
     // Sub-nav!
-    renderSub(){
-        window.addEventListener("DOMContentLoaded", () => {
+    renderSub() {
+        setTimeout(() => {
             this.shadowRoot.getElementById('myNav').buttons = [
-            { title: 'Om oss', href: '/' },
-            { title: 'Våra värden', href: 'Values' }
-        ]});
+                { title: 'Om oss', href: '/' },
+                { title: 'Våra värden', href: 'Values' }
+            ];
+        }, 0);
     }
 
-    render(){
+    render() {
         this.shadowRoot.innerHTML = `
         <style>
             #container{

@@ -13,18 +13,16 @@ class StaffView extends HTMLElement {
         this.render();
     }
 
-    // Sub-nav!
     renderSub() {
-        window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
             this.shadowRoot.getElementById('myNav').buttons = [
                 { title: 'Our Staff', href: 'staff' },
                 { title: 'Intranet', href: 'intranet' }
-            ]
-        });
-
-        this.eListeners()
+            ];
+            this.eListeners();
+        }, 0);
     }
-
+    
     style() {
         return `
             #container{
@@ -102,21 +100,20 @@ class StaffView extends HTMLElement {
         const h1 = this.shadowRoot.querySelector("h1");
         const parent = this.shadowRoot.querySelector(".content");
         let childElem = ""
-        
+
         switch (clickedBtn) {
             case "staff":
                 h1.innerHTML = "Our Employees";
                 childElem = "<staff-card-container-elem></staff-card-container-elem>";
                 parent.innerHTML = `${childElem}`;
                 break;
-                
+
             case "intranet":
                 h1.innerHTML = "Sign in to our Employee Intranet";
                 childElem = "<sign-in-elem></sign-in-elem>";
                 parent.innerHTML = `${childElem}`;
-                console.log("HCILD")
                 break;
-                    
+
             default:
                 h1.innerHTML = "Our Employees";
                 childElem = "<staff-card-container-elem></staff-card-container-elem>";
