@@ -1,13 +1,11 @@
-
 export const playAudio = {
-
-    loading() {
-        const loadingAudio = document.getElementById("loadingAudio");
+    
+    loading(rootElem) {
+        const loadingAudio = rootElem.getElementById("loadingAudio");
         loadingAudio.play();
     },
-
-    error() {
-        const errorAudio = document.getElementById("errorAudio");
+    error(rootElem) {
+        const errorAudio = rootElem.getElementById("errorAudio");
         errorAudio.play();
     }
     

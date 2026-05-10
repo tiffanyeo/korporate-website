@@ -1,6 +1,7 @@
 
 // VIEWS
 import "./views/staff/staff.js"
+import "./views/remoteDesktop/remoteDesktop.js"
 
 // COMPONENTS 
 import "./components/header-elem/header-elem.js";

@@ -1,36 +1,38 @@
-
 class clientRouter {
-
     setNewURL(path) {
-
-        const currURL = window.location.pathname;
-
-        // SPA (index.html)
-        if (currURL.includes(path)) {
-            window.history.pushState({}, "", path);
-            return;
-        } else {
-            
-            // ROUTING IMBETWEEN (index.html/remoteDesktop.html)
-            window.history.pushState({}, "", path);
-            //fetch(path);
-            fetch("https://en.wikipedia.org/wiki/Main_Page");
-            this.handleRoute(path);
-        }
-
+        window.history.pushState({}, "", path);
+        this.handleRoute();
     }
 
+    handleRoute() {
+        const path = window.location.pathname;
+        const content = document.getElementById("content");
+        if (!content) return;
 
-
-
-    handleRoute(href) {
-
-        if (href) window.location.href = href;
+        if (path.startsWith("/home")) {
+            switch (path) {
+                case "/home/about":
+                    content.innerHTML = "<about-view></about-view>";
+                    break;
+                case "/home/news":
+                    content.innerHTML = "<staff-view></staff-view>";
+                    break;
+                case "/home/contact":
+                    content.innerHTML = "<staff-view></staff-view>";
+                    break;
+                case "/home/staff":
+                    content.innerHTML = "<staff-view></staff-view>";
+                    break;
+                default:
+                    content.innerHTML = "<about-view></about-view>";
+                    break;
+            }
+        } else if (path.startsWith("/remoteDesktop")) {
+            content.innerHTML = "<remote-desktop-view></remote-desktop-view>";
+        }
     }
 }
 
 export const ClientRouter = new clientRouter();
-
-// Run when init and back/forward
 window.addEventListener("load", () => ClientRouter.handleRoute());
 window.addEventListener("popstate", () => ClientRouter.handleRoute());

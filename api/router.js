@@ -5,8 +5,13 @@ class apiRouter {
         const path = new URL(url).pathname;
 
         // HTML ROUTES
-        if (path.startsWith("/home")) return await this.serveFile("../client/index.html");
-        if (path.startsWith("/remoteDesktop")) return await this.serveFile("../client/views/remoteDesktop/remoteDesktop.html");
+        if (
+            path === "/" || 
+            path.startsWith("/home") || 
+            path.startsWith("/remoteDesktop")
+        ) {
+            return await this.serveFile("../client/index.html");
+        }
 
         // STATIC FILES
         if (
