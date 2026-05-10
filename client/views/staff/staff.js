@@ -99,31 +99,27 @@ class StaffView extends HTMLElement {
 
     toggleContent(clickedBtn) {
 
+        const h1 = this.shadowRoot.querySelector("h1");
         const parent = this.shadowRoot.querySelector(".content");
         let childElem = ""
-        const h1 = this.shadowRoot.querySelector("h1");
         
         switch (clickedBtn) {
             case "staff":
-                childElem = "<staff-card-container-elem></staff-card-container-elem>";
                 h1.innerHTML = "Our Employees";
-                parent.innerHTML = "";
+                childElem = "<staff-card-container-elem></staff-card-container-elem>";
                 parent.innerHTML = `${childElem}`;
                 break;
                 
             case "intranet":
-                    h1.innerHTML = "Sign in to our Employee Intranet";
-                    h1.innerHTML = "Sign in to our Employee Intranet";
-                    childElem = "<sign-in-elem></sign-in-elem>";
-                    parent.innerHTML = "";
-                    parent.innerHTML = `${childElem}`;
-                    console.log("HCILD")
-                    break;
+                h1.innerHTML = "Sign in to our Employee Intranet";
+                childElem = "<sign-in-elem></sign-in-elem>";
+                parent.innerHTML = `${childElem}`;
+                console.log("HCILD")
+                break;
                     
             default:
                 h1.innerHTML = "Our Employees";
                 childElem = "<staff-card-container-elem></staff-card-container-elem>";
-                parent.innerHTML = "";
                 parent.innerHTML = `${childElem}`;
         }
     }

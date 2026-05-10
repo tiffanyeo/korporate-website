@@ -31,11 +31,18 @@ export class SignInElem extends HTMLElement {
                     flex-direction: column;
                     gap: 8px;
                 }
+                
+                h3 {
+                    color: var(--color-blue-160)
+                }
 
                 input {
                     padding: 6px;
                 }
 
+                label {
+                    color: var(--color-blue-160);
+                }
                 .btn-symbol-container {
                     display: flex;
                     justify-content: space-between;
@@ -62,7 +69,7 @@ export class SignInElem extends HTMLElement {
             </style>
             
             <div class="login-window">
-                <h3>Employee Intranet</h3>
+                <h3>Korporate Intranet</h3>
                 <div class="input-container">
                     <label for="employee">Choose employee</label>
                     <select name="employee" id="employee">
