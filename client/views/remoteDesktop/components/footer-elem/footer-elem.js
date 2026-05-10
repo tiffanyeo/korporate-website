@@ -1,4 +1,4 @@
-import { StartMenu } from "./start-menu.js"
+import "./start-menu.js"
 
 export class FooterElem extends HTMLElement {
     constructor() {
@@ -37,6 +37,7 @@ export class FooterElem extends HTMLElement {
                 }
 
                 .footer-elem {
+                    user-select: none;
                     margin: 0;
                     width: 100%;
                     height: 40px;
