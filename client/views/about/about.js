@@ -4,7 +4,6 @@ class AboutView extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
-        this._activeIndex = 0;
     }
 
     connectedCallback() {
