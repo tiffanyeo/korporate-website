@@ -1,6 +1,8 @@
 
 // VIEWS
-import "./views/staff/staff.js"
+import "./views/intranet/intranet.js"
+import "./views/news/news.js"
+import "./views/contact/contact.js"
 import "./views/remoteDesktop/remoteDesktop.js"
 
 // COMPONENTS 
@@ -9,7 +11,7 @@ import "./components/main-navigation/main-navigation.js";
 import "./components/sub-navigation/sub-navigation.js";
 
 // COMPONENTS VIEW SPECIFIC (move later?)
-import "./views/about/about.js"
+import "./components/staff-card-container-elem/staff-card-container-elem.js"
 import "./views/about/about.js"
 
 

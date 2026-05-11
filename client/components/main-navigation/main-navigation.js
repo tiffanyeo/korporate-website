@@ -89,10 +89,10 @@ export class MainNavigation extends HTMLElement {
             <div class="main-nav-container">
                 <div class="button-container">
 
-                    ${createButton("about", "About")}
-                    ${createButton("news", "News")}
-                    ${createButton("contact", "Contact")}
-                    ${createButton("staff", "Staff")}
+                    ${createButton("about", "Om oss")}
+                    ${createButton("news", "Nyheter")}
+                    ${createButton("contact", "Kontakt")}
+                    ${createButton("intranet", "Intranät")}
 
                 </div>
             </div>
@@ -144,8 +144,8 @@ export class MainNavigation extends HTMLElement {
                 ClientRouter.setNewURL("/home/contact");
                 break;
 
-            case "staff":
-                ClientRouter.setNewURL("/home/staff");
+            case "intranet":
+                ClientRouter.setNewURL("/home/intranet");
                 break;
 
             default:

@@ -18,13 +18,13 @@ class clientRouter {
                     content.innerHTML = "<about-view></about-view>";
                     break;
                 case "/home/news":
-                    content.innerHTML = "<staff-view></staff-view>";
+                    content.innerHTML = "<news-view></news-view>";
                     break;
                 case "/home/contact":
-                    content.innerHTML = "<staff-view></staff-view>";
+                    content.innerHTML = "<contact-view></contact-view>";
                     break;
-                case "/home/staff":
-                    content.innerHTML = "<staff-view></staff-view>";
+                case "/home/intranet":
+                    content.innerHTML = "<intranet-view></intranet-view>";
                     break;
                 default:
                     content.innerHTML = "<about-view></about-view>";

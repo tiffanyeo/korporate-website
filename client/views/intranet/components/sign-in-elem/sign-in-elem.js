@@ -73,10 +73,10 @@ export class SignInElem extends HTMLElement {
             <style>${this.style()}</style>
             
             <div class="login-window">
-                <h3>Korporate Intranet</h3>
+                <h3>Korporate Intranät</h3>
                 
                 <div class="input-container">
-                    <label for="employee">Choose employee</label>
+                    <label for="employee">Välj personal</label>
                     <select name="employee" id="employee">
                         <option class="opt-val" value="old">OLD not in use</option>
                         <option class="opt-val" value="carl">Carl Nielsen</option>

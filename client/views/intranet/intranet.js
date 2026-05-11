@@ -1,9 +1,7 @@
 
 import "./components/sign-in-elem/sign-in-elem.js";
-import "./components/staff-card-container-elem/staff-card-container-elem.js"
 
-
-class StaffView extends HTMLElement {
+class IntranetView extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
@@ -16,7 +14,6 @@ class StaffView extends HTMLElement {
     renderSub() {
         setTimeout(() => {
             this.shadowRoot.getElementById('myNav').buttons = [
-                { title: 'Our Staff', href: 'staff' },
                 { title: 'Intranet', href: 'intranet' }
             ];
             this.eListeners();
@@ -74,11 +71,8 @@ class StaffView extends HTMLElement {
         <style>${this.style()}</style>
         <sub-navigation id="myNav"></sub-navigation>
         <div id="container">
-            <div class="blue">
-                <h1>Our Employees</h1>
-            </div>
             <div class="content">
-                <staff-card-container-elem></staff-card-container-elem>
+                <sign-in-elem></sign-in-elem>
             </div>
         </div>
         `;
@@ -102,24 +96,20 @@ class StaffView extends HTMLElement {
         let childElem = ""
 
         switch (clickedBtn) {
-            case "staff":
-                h1.innerHTML = "Our Employees";
-                childElem = "<staff-card-container-elem></staff-card-container-elem>";
-                parent.innerHTML = `${childElem}`;
-                break;
 
             case "intranet":
-                h1.innerHTML = "Sign in to our Employee Intranet";
+                h1.innerHTML = "Här loggar du in på vårt intranät";
                 childElem = "<sign-in-elem></sign-in-elem>";
                 parent.innerHTML = `${childElem}`;
                 break;
 
             default:
-                h1.innerHTML = "Our Employees";
-                childElem = "<staff-card-container-elem></staff-card-container-elem>";
+                h1.innerHTML = "Här loggar du in på vårt intranät";
+                childElem = "<sign-in-elem></sign-in-elem>";
                 parent.innerHTML = `${childElem}`;
+                break;
         }
     }
 
 }
-customElements.define("staff-view", StaffView);
+customElements.define("intranet-view", IntranetView);
