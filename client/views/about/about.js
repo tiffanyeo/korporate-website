@@ -4,20 +4,88 @@ class AboutView extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
+        this._activeIndex = 0;
     }
 
     connectedCallback() {
         this.render();
     }
+
+    eListeners(){
+        const nav = this.shadowRoot.querySelector("#myNav");
+        nav.addEventListener("click", () =>{
+            const clickedBtn = nav.activeBtn;
+            this.toggleContent(clickedBtn.href);
+        })
+    }
     // Sub-nav!
     renderSub() {
         setTimeout(() => {
             this.shadowRoot.getElementById('myNav').buttons = [
-                { title: 'Om oss', href: '/' },
-                { title: 'Våra värden', href: 'Values' }
+                { title: 'Om oss', href: 'about' },
+                { title: 'Våra värden', href: 'values' }
             ];
+            this.eListeners();
+            this.toggleContent("about");
         }, 0);
     }
+
+    toggleContent(clickedBtn){
+        const container = this.shadowRoot.querySelector("#container");
+
+        switch(clickedBtn) {
+            case "about":
+                container.innerHTML = `
+                    <div class="blue">
+                        <h1>Om oss</h1>
+                    </div>
+                    <div class="two">
+                        <p>
+                            Korporate är ett internationellt konsultföretag som etablerades år 1990 av Mads Jensen med huvudkontor i Italien. Korporate startade av <b>tre</b> vänner som ville skapa effektivare processer för interna processer hos företag. 
+                        </p>
+                        <p>
+                            I 36 år har Korporate hjälpt företag med att utveckla sina analysprocesser. Med ett flexibelt arbetssätt kan Korporate enkelt anpassa sig till marknaden. Tillsammans med dig kan Korporate.
+                            Stora projekt har lagt grunden för verksamhetens tillväxt. Vi kombinerar passion med innovation. Genom kreativa lösningar anpassar vi tjänster åt just ditt behov. 
+                        </p>
+                        <p>
+                            Allt från privata till företagsärenden. Tillsammans med dig vill vi samarbeta och utveckla din process. En skräddarsydd process och på så sätt hjälpa dig och ditt företag inför framtiden. 
+                        </p>
+                        <p>
+                            Proaktiva lösningar implementeras kontinuerligt i kunders verksamheter.
+                        </p>
+                    </div>
+                `;
+                break;
+
+            case "values":
+                container.innerHTML = `<values-view></values-view>`;
+                break;
+            
+            default:
+                container.innerHTML = `
+                    <div class="blue">
+                        <h1>Om oss</h1>
+                    </div>
+                    <div class="two">
+                        <p>
+                            Korporate är ett internationellt konsultföretag som etablerades år 1990 av Mads Jensen med huvudkontor i Italien. Korporate startade av <b>tre</b> vänner som ville skapa effektivare processer för interna processer hos företag. 
+                        </p>
+                        <p>
+                            I 36 år har Korporate hjälpt företag med att utveckla sina analysprocesser. Med ett flexibelt arbetssätt kan Korporate enkelt anpassa sig till marknaden. Tillsammans med dig kan Korporate.
+                            Stora projekt har lagt grunden för verksamhetens tillväxt. Vi kombinerar passion med innovation. Genom kreativa lösningar anpassar vi tjänster åt just ditt behov. 
+                        </p>
+                        <p>
+                            Allt från privata till företagsärenden. Tillsammans med dig vill vi samarbeta och utveckla din process. En skräddarsydd process och på så sätt hjälpa dig och ditt företag inför framtiden. 
+                        </p>
+                        <p>
+                            Proaktiva lösningar implementeras kontinuerligt i kunders verksamheter.
+                        </p>
+                    </div>
+                `;
+        }
+    }
+
+
 
     render() {
         this.shadowRoot.innerHTML = `
@@ -66,24 +134,6 @@ class AboutView extends HTMLElement {
         </style>
         <sub-navigation id="myNav"></sub-navigation>
         <div id="container">
-            <div class="blue">
-                <h1>Om oss</h1>
-            </div>
-            <div class="two">
-                <p>
-                    Korporate är ett internationellt konsultföretag som etablerades år 1990 av Mads Jensen med huvudkontor i Italien. Korporate startade av <b>tre</b> vänner som ville skapa effektivare processer för interna processer hos företag. 
-                </p>
-                <p>
-                    I 36 år har Korporate hjälpt företag med att utveckla sina analysprocesser. Med ett flexibelt arbetssätt kan Korporate enkelt anpassa sig till marknaden. Tillsammans med dig kan Korporate.
-                    Stora projekt har lagt grunden för verksamhetens tillväxt. Vi kombinerar passion med innovation. Genom kreativa lösningar anpassar vi tjänster åt just ditt behov. 
-                </p>
-                <p>
-                    Allt från privata till företagsärenden. Tillsammans med dig vill vi samarbeta och utveckla din process. En skräddarsydd process och på så sätt hjälpa dig och ditt företag inför framtiden. 
-                </p>
-                <p>
-                    Proaktiva lösningar implementeras kontinuerligt i kunders verksamheter.
-                </p>
-            </div>
         </div>
         `;
         this.renderSub();

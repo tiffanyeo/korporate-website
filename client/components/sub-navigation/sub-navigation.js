@@ -58,6 +58,7 @@ export class SubNavigation extends HTMLElement {
                 e.target.id = "active";
                 // To render new content
                 this._activeIndex = index;
+                
             });
         });
 
