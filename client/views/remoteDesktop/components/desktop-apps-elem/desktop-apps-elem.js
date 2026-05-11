@@ -15,7 +15,6 @@ export class DesktopElement extends HTMLElement{
         icons.forEach(icon => icon.addEventListener("click", ()=>{
             const app = icon.getAttribute("app");
             if (app === "notes") {
-                console.log("rätt!")
                 content.appendChild(document.createElement("notes-app"));
             }
 
