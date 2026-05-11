@@ -1,6 +1,7 @@
 import "./values.js"
 
 class AboutView extends HTMLElement {
+    
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
@@ -10,29 +11,33 @@ class AboutView extends HTMLElement {
         this.render();
     }
 
-    eListeners(){
+    eListeners() {
         const nav = this.shadowRoot.querySelector("#myNav");
-        nav.addEventListener("click", () =>{
+        nav.addEventListener("click", () => {
             const clickedBtn = nav.activeBtn;
             this.toggleContent(clickedBtn.href);
         })
     }
+
     // Sub-nav!
     renderSub() {
         setTimeout(() => {
             this.shadowRoot.getElementById('myNav').buttons = [
                 { title: 'Om oss', href: 'about' },
-                { title: 'Våra värden', href: 'values' }
+                { title: 'Våra värden', href: 'values' },
+                { title: 'Vår Personal', href: 'staff' }
             ];
             this.eListeners();
             this.toggleContent("about");
         }, 0);
     }
 
-    toggleContent(clickedBtn){
+    toggleContent(clickedBtn) {
+
         const container = this.shadowRoot.querySelector("#container");
 
-        switch(clickedBtn) {
+        switch (clickedBtn) {
+
             case "about":
                 container.innerHTML = `
                     <div class="blue">
@@ -57,9 +62,19 @@ class AboutView extends HTMLElement {
                 break;
 
             case "values":
-                container.innerHTML = `<values-view></values-view>`;
+                container.innerHTML = `
+                    <values-view></values-view>
+                `;
                 break;
-            
+
+            case "staff":
+                container.innerHTML = `
+                    <div class="blue">
+                        <h1>Vår personal</h1>
+                    </div>
+                    <staff-card-container-elem></staff-card-container-elem>`;
+                break;
+
             default:
                 container.innerHTML = `
                     <div class="blue">
@@ -81,10 +96,9 @@ class AboutView extends HTMLElement {
                         </p>
                     </div>
                 `;
+                
         }
     }
-
-
 
     render() {
         this.shadowRoot.innerHTML = `
@@ -139,4 +153,5 @@ class AboutView extends HTMLElement {
     }
 
 }
+
 customElements.define("about-view", AboutView);
