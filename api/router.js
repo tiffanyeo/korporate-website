@@ -44,7 +44,7 @@ class apiRouter {
 
 
     async serveStatic(path) {
-        const fileUrl = new URL(path, import.meta.url); // Ta bort "../client" prefixet här
+        const fileUrl = new URL(path, import.meta.url);
         try {
             const file = await Deno.readFile(fileUrl);
             const mime = this.getMime(path);
@@ -62,8 +62,6 @@ class apiRouter {
 
 
     getMime(path) {
-
-        // console.log("MIME CHECK:", path);
 
         if (path.endsWith(".js")) return "application/javascript";
         if (path.endsWith(".css")) return "text/css";
