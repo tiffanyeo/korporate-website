@@ -6,8 +6,8 @@ class apiRouter {
 
         // HTML ROUTES
         if (
-            path === "/" || 
-            path.startsWith("/home") || 
+            path === "/" ||
+            path.startsWith("/home") ||
             path.startsWith("/remoteDesktop")
         ) {
             return await this.serveFile("../client/index.html");
@@ -23,7 +23,7 @@ class apiRouter {
             path.endsWith(".ttf") ||
             path.endsWith(".ico") ||
             path.endsWith(".jpg") || path.endsWith(".jpeg")
-        ) return await this.serveStatic(`korporate-website/client${path}`);
+        ) return await this.serveStatic(`../client${path}`);
 
         // DEFAULT 
         return new Response("Page Not Found", { status: 404 });
@@ -44,25 +44,17 @@ class apiRouter {
 
 
     async serveStatic(path) {
-
-        // console.log("STATIC REQUEST:", path);
-
-        // STATIC OK
-        const fileUrl = new URL("../client" + path, import.meta.url);
-
+        const fileUrl = new URL(path, import.meta.url); // Ta bort "../client" prefixet här
         try {
             const file = await Deno.readFile(fileUrl);
             const mime = this.getMime(path);
-
             if (!mime) {
                 return new Response("Not found", { status: 404 });
             }
-
             return new Response(file, {
                 status: 200,
                 headers: { "Content-Type": mime }
             });
-
         } catch {
             return new Response("Not found", { status: 404 });
         }
