@@ -74,22 +74,25 @@ export class StaffCardContainerElem extends HTMLElement {
             </style>
             
             <div class="staff-container-elem">
+
+                
                 <div class="staff-card">
                     <div class="staff-position-container">
                         <div class="staff-info">
-                            <h4 class="staff-title">My Tile</h4>
-                            <p class="staff-name">Staff Name</p>
-                            <p class="staff-start-year">0000</p>
+                            <h4 class="staff-title">VD</h4>
+                            <p class="staff-name">Carl Nielsen</p>
+                            <p class="staff-start-year">1978</p>
+                            <p class="staff-quote">"Vi bygger inte bara hemsidor. Vi bygger första intryck."</p>
                         </div>
                         <div class="staff-image-quote-container">
-                            <img src="" alt="IMG" class="staff-image">
-                            <p class="staff-quote">"To find the caduceus, with its two snakes and wings"</p>
+                            <img src="/views/assets/images/carl-profile-2.jpg" alt="IMG" class="staff-image">
                         </div>
                     </div>
                     <div class="staff-history-text-container">
-                        <p class="staff-history-text">The Rod of Asclepius takes its name from the Greek god Asclepius, a deity associated with healing and medicinal arts in ancient Greek religion and mythology.</p>
+                        <p class="staff-history-text">Resan började med en dator, stora idéer och viljan att skapa något eget. Genom hårt arbete och passion för att hjäpa företag växte Korporate fram med målet att hjälpa företag bygga starka digitala varumärken.</p>
                     </div>
                 </div>
+            
                 <div class="staff-card">
                     <div class="staff-position-container">
                         <div class="staff-info">
