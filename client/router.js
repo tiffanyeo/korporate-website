@@ -2,6 +2,7 @@ class clientRouter {
     
     setNewURL(path) {
         window.history.pushState({}, "", path);
+        console.log("UPDATED URL", path)
         this.handleRoute();
     }
 
@@ -26,6 +27,9 @@ class clientRouter {
                     break;
                 case "/intranet":
                     content.innerHTML = "<intranet-view></intranet-view>";
+                    break;
+                case "/remoteDesktop":
+                    content.innerHTML = "<remote-desktop-view></remote-desktop-view>";
                     break;
                 default:
                     content.innerHTML = "<about-view></about-view>";

@@ -89,7 +89,7 @@ export class SignInElem extends HTMLElement {
                 <div class="btn-symbol-container">
                     <button class="btn-sign-in">Sign in</button>
                     <div class="icon-container">
-                        <img class="icon-img" src="../../assets/icons/antivirus.png" alt="">
+                        <img class="icon-img" src="/client/views/assets/icons/antivirus.png" alt="">
                     </div>
                 </div>
                 
