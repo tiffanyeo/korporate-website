@@ -11,6 +11,8 @@ class clientRouter {
         const path = window.location.pathname;
         console.log(path);
 
+        const main = document.querySelector("main");
+
         if (path.startsWith("/")) {
             switch (path) {
                 case "/":
@@ -29,14 +31,13 @@ class clientRouter {
                     content.innerHTML = "<intranet-view></intranet-view>";
                     break;
                 case "/remoteDesktop":
-                    content.innerHTML = "<remote-desktop-view></remote-desktop-view>";
+                    main.innerHTML = "<remote-desktop-view></remote-desktop-view>";
                     break;
                 default:
                     content.innerHTML = "<about-view></about-view>";
                     break;
             }
         } else if (path.startsWith("/remoteDesktop")) {
-            const main = document.querySelector("main");
             main.innerHTML = "<remote-desktop-view></remote-desktop-view>";
         }
     }
