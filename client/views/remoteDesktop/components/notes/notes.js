@@ -30,7 +30,7 @@ export class NotesApp extends HTMLElement{
 
     }
     riddle(){
-        const text = `Så kul att du kommer till konferensen med oss på Consulting <b>Park</b>. Vi ser fram emot att träffa ert team och diskutera kring framtida samarbeten.\nJag skriver angående flytten av mötesplats då vi inte kunde anordna konferensen på slakthuset, men istället kunde vi anordna en sal i närheten.\nDet bjuds på gott kaffe!\nTa ditt sista beslut på plats, gör rätt val.\nKeep in <b>mind</b> att ta med brevet.\n \nVänliga hälsningar David på Consulting Park\n
+        const text = `Så kul att du kommer till konferensen med oss på Consulting Park. Vi ser fram emot att träffa ert team och diskutera kring framtida samarbeten.\nJag skriver angående flytten av mötesplats då vi inte kunde anordna konferensen på slakthuset, men istället kunde vi anordna en sal i närheten.\nDet bjuds på gott kaffe!\nTa ditt sista beslut på plats, gör rätt val.\nKeep in mind att ta med brevet.\n \nVänliga hälsningar David på Consulting Park\n
                 \nTa dig till Orkanens våning där atmosfären präglas av ett lugn i böckernas värld. På skrivarvägen 305 väntar dig nya vyer bredvid poesi och dikter. Kanske får du ett nytt perspektiv och finner något på längre sikter.\nVad ser du framför dig över hav och hus? Ta en titt bortom himlens ljus, där den höga byggnaden står i vindens brus, med sin stabila bas och resten täckt i glas.\nTa dig genom glasbyggnadens svängdörrar där du möts av doften av kaffe och fika. Bredvid receptionen ser du en papperskorg och en brevlåda, dessa bör du noggrant överskåda.\nTa ditt sista avgörande beslut. Ja eller nej, det är helt upp till dig. `;
         return text;
         }
