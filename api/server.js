@@ -22,7 +22,7 @@ class server {
     }
 
     controller(result) {
-        
+
         if (result instanceof Response) return result;
 
         return new Response(null, {
@@ -34,15 +34,18 @@ class server {
     }
 
     handler() {
-        Deno.serve(async (req) => {
-            // Preflight
-            const cors = this.corsMiddleware(req);
-            if (cors) return cors;
+        Deno.serve(
+            { port: Number(Deno.env.get("PORT")) || 8000 },
+            async (req) => {
 
-            // Rendering OK?
-            const result = await this.router.handleRoute(req.url);
-            return this.controller(result);
-        });
+                // Preflight
+                const cors = this.corsMiddleware(req);
+                if (cors) return cors;
+
+                // Rendering OK?
+                const result = await this.router.handleRoute(req.url);
+                return this.controller(result);
+            });
     }
 
 }
