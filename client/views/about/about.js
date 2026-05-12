@@ -45,7 +45,7 @@ class AboutView extends HTMLElement {
                     </div>
                     <div class="two">
                         <p>
-                            Korporate är ett internationellt konsultföretag som etablerades år 1990 av Mads Jensen med huvudkontor i Italien. Korporate startade av <b>tre</b> vänner som ville skapa effektivare processer för interna processer hos företag. 
+                            Korporate är ett internationellt konsultföretag som etablerades år 1990 av Carl Nielsen med huvudkontor i Italien. Korporate startade av tre vänner som ville skapa effektivare processer för interna processer hos företag. 
                         </p>
                         <p>
                             I 36 år har Korporate hjälpt företag med att utveckla sina analysprocesser. Med ett flexibelt arbetssätt kan Korporate enkelt anpassa sig till marknaden. Tillsammans med dig kan Korporate.
@@ -82,7 +82,7 @@ class AboutView extends HTMLElement {
                     </div>
                     <div class="two">
                         <p>
-                            Korporate är ett internationellt konsultföretag som etablerades år 1990 av Mads Jensen med huvudkontor i Italien. Korporate startade av <b>tre</b> vänner som ville skapa effektivare processer för interna processer hos företag. 
+                            Korporate är ett internationellt konsultföretag som etablerades år 1990 av Carl Nielsen med huvudkontor i Italien. Korporate startade av tre vänner som ville skapa effektivare processer för interna processer hos företag. 
                         </p>
                         <p>
                             I 36 år har Korporate hjälpt företag med att utveckla sina analysprocesser. Med ett flexibelt arbetssätt kan Korporate enkelt anpassa sig till marknaden. Tillsammans med dig kan Korporate.
