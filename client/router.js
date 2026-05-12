@@ -36,7 +36,8 @@ class clientRouter {
                     break;
             }
         } else if (path.startsWith("/remoteDesktop")) {
-            content.innerHTML = "<remote-desktop-view></remote-desktop-view>";
+            const main = document.querySelector("main");
+            main.innerHTML = "<remote-desktop-view></remote-desktop-view>";
         }
     }
 }
