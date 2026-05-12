@@ -45,7 +45,7 @@ export class StaffCardContainerElem extends HTMLElement {
                 }
 
                 .staff-image {
-                    border: 2px solid hotpink;
+                    border: 2px solid rgb(21, 17, 59);
                     width: 150px;
                     border-radius: 4px;
                     background-color: lightblue;
@@ -89,43 +89,43 @@ export class StaffCardContainerElem extends HTMLElement {
                         </div>
                     </div>
                     <div class="staff-history-text-container">
-                        <p class="staff-history-text">Resan började med en dator, stora idéer och viljan att skapa något eget. Genom hårt arbete och passion för att hjäpa företag växte Korporate fram med målet att hjälpa företag bygga starka digitala varumärken.</p>
+                        <p class="staff-history-text">Resan började med en dator, stora idéer och viljan att skapa något eget. Genom hårt arbete och passion för att hjäpa företag växte Korporate fram med målet att hjälpa bygga starka idéer.</p>
                     </div>
                 </div>
             
                 <div class="staff-card">
                     <div class="staff-position-container">
                         <div class="staff-info">
-                            <h4 class="staff-title">My Tile</h4>
-                            <p class="staff-name">Staff Name</p>
-                            <p class="staff-start-year">0000</p>
+                            <h4 class="staff-title">Assistent</h4>
+                            <p class="staff-name">Sandra Pterov</p>
+                            <p class="staff-start-year">1999</p>
+                            <p class="staff-quote">"Jag tror att de bästa resultaten skapas genom struktur, kommunikation och ett genuint engagemang i människorna omkring oss."</p>
                         </div>
                         <div class="staff-image-quote-container">
-                            <img src="" alt="IMG" class="staff-image">
-                            <p class="staff-quote">"To find the caduceus, with its two snakes and wings"</p>
+                            <img src="/views/assets/images/sandra-profile-2.jpg" alt="IMG" class="staff-image">
                         </div>
                     </div>
                     <div class="staff-history-text-container">
-                        <p class="staff-history-text">The Rod of Asclepius takes its name from the Greek god Asclepius, a deity associated with healing and medicinal arts in ancient Greek religion and mythology.</p>
+                        <p class="staff-history-text">Inifrån företaget har Sandra varit en viktig del av att skapa stabilitet, struktur och en positiv energi i det dagliga arbetet. Genom sitt engagemang och sitt sätt att alltid hålla både team och processer samman har hon blivit en självklar del av företagets utveckling.</p>
                     </div>
                 </div>
+                    
                 <div class="staff-card">
                     <div class="staff-position-container">
                         <div class="staff-info">
-                            <h4 class="staff-title">My Tile</h4>
-                            <p class="staff-name">Staff Name</p>
-                            <p class="staff-start-year">0000</p>
+                            <h4 class="staff-title">Ekonomi</h4>
+                            <p class="staff-name">Irma Nagy</p>
+                            <p class="staff-start-year">2003</p>
+                            <p class="staff-quote">"För mig handlar ekonomi inte bara om siffror.. Det handlar om att skapa trygghet, struktur och hållbar utveckling för hela företaget"</p>
                         </div>
                         <div class="staff-image-quote-container">
-                            <img src="" alt="IMG" class="staff-image">
-                            <p class="staff-quote">"To find the caduceus, with its two snakes and wings"</p>
+                            <img src="/views/assets/images/staff2-profile-2.jpg" alt="IMG" class="staff-image">
                         </div>
                     </div>
                     <div class="staff-history-text-container">
-                        <p class="staff-history-text">The Rod of Asclepius takes its name from the Greek god Asclepius, a deity associated with healing and medicinal arts in ancient Greek religion and mythology.</p>
+                        <p class="staff-history-text">Med ett starkt öga för detaljer och ett lugnt, analytiskt arbetssätt har hon blivit en central del av företagets stabilitet och tillväxt. Hennes arbete bakom kulisserna skapar förutsättningar för både struktur, långsiktig planering och fortsatt utveckling.</p>
                     </div>
                 </div>
-            </div>
         `;
     }
 }
