@@ -8,22 +8,23 @@ class clientRouter {
     handleRoute() {
         
         const path = window.location.pathname;
+        console.log(path);
 
         if (path.startsWith("/home")) {
             switch (path) {
-                case "/home":
+                case "/":
                     content.innerHTML = "<about-view></about-view>";
                     break;
-                case "/home/about":
+                case "/about":
                     content.innerHTML = "<about-view></about-view>";
                     break;
-                case "/home/news":
+                case "/news":
                     content.innerHTML = "<news-view></news-view>";
                     break;
-                case "/home/contact":
+                case "/contact":
                     content.innerHTML = "<contact-view></contact-view>";
                     break;
-                case "/home/intranet":
+                case "/intranet":
                     content.innerHTML = "<intranet-view></intranet-view>";
                     break;
                 default:

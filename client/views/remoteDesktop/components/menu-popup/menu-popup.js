@@ -1,3 +1,5 @@
+import "./menu-item.js";
+
 export class MenuPopup extends HTMLElement{
     constructor(){
         super();
@@ -127,7 +129,10 @@ export class MenuPopup extends HTMLElement{
                 <h5>Carl Nielsen</h5>
             </div>
             <div class="menu-middle">
-                <div class="menu-middle-column" id="menu-middle-left"></div>
+                <div class="menu-middle-column" id="menu-middle-left">
+                    <menu-item app="Internet" name="Internet Explorer" imgpath="./views/assets/icons/app.icon-explorer.png"></menu-item>
+                    <menu-item app="Internet Spades" imgpath="./views/assets/icons/app-icon-spades-game.png"></menu-item>
+                </div>
                 <div class="menu-middle-column" id="menu-middle-right"></div>
             </div>
             <div class="menu-bottom menu-border">
