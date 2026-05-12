@@ -28,22 +28,128 @@
             background-color: white;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
-        
+
+
+
+
+        .staff-container-elem {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .staff-container-h3 {
+            margin-bottom: 0;
+        }
+
+        .staff-card {
+            display: flex;
+            flex-direction: column;
+            background-color: lightgray;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .staff-info {
+            width: 100%;
+        }
+
+        .staff-position-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .staff-image-quote-container {
+            display: flex;
+        }
+
+        .staff-image {
+            border: 2px solid rgb(21, 17, 59);
+            width: 150px;
+            border-radius: 4px;
+            background-color: lightblue;
+            margin-left: 20px;
+        }
+
+        .staff-quote {
+            font-style: italic;
+            font-size: smaller;
+            padding: 0 5px;
+            text-align: center;
+        }
+
+        .staff-title {
+            font-size: larger;
+            font-weight: 500;
+            margin-top: 5px;
+            margin-bottom: 8px;
+            border-bottom: 2px solid gray;
+
+        }
+
+        .staff-name {
+            margin-top: 0;
+        }
     </style>
 
 
     <main>
         <header-elem></header-elem>
-        <main-navigation></main-navigation>    
+        <main-navigation></main-navigation>
         <div id="content">
+
+            <div class="staff-card">
+                <div class="staff-position-container">
+                    <div class="staff-info">
+                        <h4 class="staff-title">Ekonomi</h4>
+                        <p class="staff-name">Irma Nagy</p>
+                        <p class="staff-start-year">2003</p>
+                        <p class="staff-quote">"För mig handlar ekonomi inte bara om siffror.. Det handlar om att skapa trygghet, struktur och hållbar utveckling för hela företaget"</p>
+                    </div>
+                    <div class="staff-image-quote-container">
+                        <img src="./views/assets/images/staff2-profile-2.jpg" alt="IMG" class="staff-image">
+                    </div>
+                </div>
+                <div class="staff-history-text-container">
+                    <p class="staff-history-text">Med ett starkt öga för detaljer och ett lugnt, analytiskt arbetssätt har hon blivit en central del av företagets stabilitet och tillväxt. Hennes arbete bakom kulisserna skapar förutsättningar för både struktur, långsiktig planering och fortsatt utveckling.</p>
+                </div>
+            </div>
             
-            <about-view></about-view> 
-            <!-- <staff-view></staff-view> -->
+            <div class="staff-card">
+                <div class="staff-position-container">
+                    <div class="staff-info">
+                        <h4 class="staff-title">Assistent</h4>
+                        <p class="staff-name">Sandra Pterov</p>
+                        <p class="staff-start-year">1999</p>
+                        <p class="staff-quote">"Jag tror att de bästa resultaten skapas genom struktur, kommunikation och ett genuint engagemang i människorna omkring oss."</p>
+                    </div>
+                    <div class="staff-image-quote-container">
+                        <img src="./views/assets//images/sandra-profile-2.jpg" alt="IMG" class="staff-image">
+                    </div>
+                </div>
+                <div class="staff-history-text-container">
+                    <p class="staff-history-text">Inifrån företaget har Sandra varit en viktig del av att skapa stabilitet, struktur och en positiv energi i det dagliga arbetet. Genom sitt engagemang och sitt sätt att alltid hålla både team och processer samman har hon blivit en självklar del av företagets utveckling.</p>
+                </div>
+            </div>
             
-        </div>
+            <div class="staff-card">
+                <div class="staff-position-container">
+                    <div class="staff-info">
+                        <h4 class="staff-title">VD</h4>
+                        <p class="staff-name">Carl Nielsen</p>
+                        <p class="staff-start-year">1978</p>
+                        <p class="staff-quote">"Vi bygger inte bara hemsidor. Vi bygger första intryck."</p>
+                    </div>
+                    <div class="staff-image-quote-container">
+                        <img src="./views/assets//images/carl-profile-2.jpg" alt="IMG" class="staff-image">
+                    </div>
+                </div>
+                <div class="staff-history-text-container">
+                    <p class="staff-history-text">Resan började med en dator, stora idéer och viljan att skapa något eget. Genom hårt arbete och passion för att hjäpa företag växte Korporate fram med målet att hjälpa företag bygga starka digitala varumärken.</p>
+                </div>
+            </div>
     </main>
 
-    <script type="module" src="index.js"></script>
 </body>
 
 </html>

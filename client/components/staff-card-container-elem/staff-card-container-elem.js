@@ -82,7 +82,7 @@ export class StaffCardContainerElem extends HTMLElement {
                             <h4 class="staff-title">VD</h4>
                             <p class="staff-name">Carl Nielsen</p>
                             <p class="staff-start-year">1978</p>
-                            <p class="staff-quote">"Vi bygger inte bara hemsidor. Vi bygger första intryck."</p>
+                            <p class="staff-quote">"Jag jobbar inte med att bygga affärsmöjligheter, det är viktigt för mig att bygga relationer med mina kunder."</p>
                         </div>
                         <div class="staff-image-quote-container">
                             <img src="/views/assets/images/carl-profile-2.jpg" alt="IMG" class="staff-image">
