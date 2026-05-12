@@ -45,17 +45,16 @@ class AboutView extends HTMLElement {
                     </div>
                     <div class="two">
                         <p>
-                            Korporate är ett internationellt konsultföretag som etablerades år 1990 av Carl Nielsen med huvudkontor i Italien. Korporate startade av tre vänner som ville skapa effektivare processer för interna processer hos företag. 
+                            Proaktiva lösningar genomsyrar vår filosofi på Korporate. I 36 år har vi hjälpt företag med att utveckla sina analysprocesser. Med ett flexibelt arbetssätt kan vi enkelt anpassa er till marknaden. 
                         </p>
                         <p>
-                            I 36 år har Korporate hjälpt företag med att utveckla sina analysprocesser. Med ett flexibelt arbetssätt kan Korporate enkelt anpassa sig till marknaden. Tillsammans med dig kan Korporate.
-                            Stora projekt har lagt grunden för verksamhetens tillväxt. Vi kombinerar passion med innovation. Genom kreativa lösningar anpassar vi tjänster åt just ditt behov. 
+                            Genom åren har vi etablerat sig internationellt där vi utför allt från privata till företagsärenden. Tillsammans med dig vill vi samarbeta och utveckla din process. En skräddarsydd process som hjälper dig och ditt företag inför framtiden.
                         </p>
                         <p>
-                            Allt från privata till företagsärenden. Tillsammans med dig vill vi samarbeta och utveckla din process. En skräddarsydd process och på så sätt hjälpa dig och ditt företag inför framtiden. 
+                            Allt började med vår VD, en ung dansk man som föddes på en osannolik plats med stora drömmar. Vår VD Carl Nielsen driver företaget med sina anställda som är bosatta runt om i hela världen. Huvudkontoret i Toscanas västra del med utsikt mot floden Arno har en betydande roll för grundaren Carl Nielsen, både som hans födelseplats och som inspirationskälla. Det lutande tornet symboliserade ståndaktighet genom svårigheter vilket lade grunden för hans ide för uppbyggnaden av Korporate över lång tid.
                         </p>
                         <p>
-                            Proaktiva lösningar implementeras kontinuerligt i kunders verksamheter.
+                            Hemorten är något som alltid kommer att finnas i Nielsens inspiration och som alltid symboliserar grundpelaren för Korporate. 
                         </p>
                     </div>
                 `;
@@ -82,17 +81,16 @@ class AboutView extends HTMLElement {
                     </div>
                     <div class="two">
                         <p>
-                            Korporate är ett internationellt konsultföretag som etablerades år 1990 av Carl Nielsen med huvudkontor i Italien. Korporate startade av tre vänner som ville skapa effektivare processer för interna processer hos företag. 
+                            Proaktiva lösningar genomsyrar vår filosofi på Korporate. I 36 år har vi hjälpt företag med att utveckla sina analysprocesser. Med ett flexibelt arbetssätt kan vi enkelt anpassa er till marknaden. 
                         </p>
                         <p>
-                            I 36 år har Korporate hjälpt företag med att utveckla sina analysprocesser. Med ett flexibelt arbetssätt kan Korporate enkelt anpassa sig till marknaden. Tillsammans med dig kan Korporate.
-                            Stora projekt har lagt grunden för verksamhetens tillväxt. Vi kombinerar passion med innovation. Genom kreativa lösningar anpassar vi tjänster åt just ditt behov. 
+                            Genom åren har vi etablerat sig internationellt där vi utför allt från privata till företagsärenden. Tillsammans med dig vill vi samarbeta och utveckla din process. En skräddarsydd process som hjälper dig och ditt företag inför framtiden.
                         </p>
                         <p>
-                            Allt från privata till företagsärenden. Tillsammans med dig vill vi samarbeta och utveckla din process. En skräddarsydd process och på så sätt hjälpa dig och ditt företag inför framtiden. 
+                            Allt började med vår VD, en ung dansk man som föddes på en osannolik plats med stora drömmar. Vår VD Carl Nielsen driver företaget med sina anställda som är bosatta runt om i hela världen. Huvudkontoret i Toscanas västra del med utsikt mot floden Arno har en betydande roll för grundaren Carl Nielsen, både som hans födelseplats och som inspirationskälla. Det lutande tornet symboliserade ståndaktighet genom svårigheter vilket lade grunden för hans ide för uppbyggnaden av Korporate över lång tid.
                         </p>
                         <p>
-                            Proaktiva lösningar implementeras kontinuerligt i kunders verksamheter.
+                            Hemorten är något som alltid kommer att finnas i Nielsens inspiration och som alltid symboliserar grundpelaren för Korporate. 
                         </p>
                     </div>
                 `;
