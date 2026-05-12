@@ -107,6 +107,7 @@ export class SignInElem extends HTMLElement {
             const employee = this.shadowRoot.querySelector("#employee").value;
             const pwd = this.shadowRoot.querySelector("#pwd").value;
             if (employee == "carl" && pwd == "PISA") ClientRouter.setNewURL(path);
+            console.log("CHANGING URL", path)
         })
         
     }
