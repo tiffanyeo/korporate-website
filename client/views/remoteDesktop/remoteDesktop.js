@@ -3,6 +3,7 @@ import { playAudio } from "./utils/playAudio.js";
 import { FooterElem } from "./components/footer-elem/footer-elem.js";
 import { selectionMarking } from "./features/selectionMarking/selectionMarking.js";
 import { NotesApp } from "./components/notes/notes.js";
+import { ArticleApp } from "./components/notes/article.js";
 import { DesktopElement } from "./components/desktop-apps-elem/desktop-apps-elem.js"
 
 class RemoteDesktopView extends HTMLElement {
@@ -82,6 +83,7 @@ class RemoteDesktopView extends HTMLElement {
             <div class="desktop">
                 <div id="desktop-icons">
                     <desktop-element imgpath="../assets/icons/app-icon-notes.png" name="Notes" app="notes"></desktop-element>
+                    <desktop-element imgpath="../assets/icons/app-icon-notes.png" name="Artikel" app="article"></desktop-element>
                 </div>
                 <div id="selectMarking"></div>
                 <div id="content">
