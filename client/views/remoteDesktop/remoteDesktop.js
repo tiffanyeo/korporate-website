@@ -21,7 +21,7 @@ class RemoteDesktopView extends HTMLElement {
         return `
             @font-face {
                 font-family: LibreFranklin;
-                src: url("../assets/fonts/regular/LibreFranklin-Regular.ttf");
+                src: url("/views/assets/fonts/regular/LibreFranklin-Regular.ttf");
             }
 
             :host {
@@ -32,7 +32,7 @@ class RemoteDesktopView extends HTMLElement {
             .desktop {
                 max-width: 430px;
                 min-height: 932px;
-                background-image: url("../assets/images/windows-background.jpg");
+                background-image: url("/views/assets/images/windows-background.jpg");
                 background-size: auto 120%;
                 background-repeat: no-repeat;
                 background-position: right 69% top 0%;
@@ -78,12 +78,12 @@ class RemoteDesktopView extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = `
             <style>${this.style()}</style>
-            <audio id="loadingAudio" src="../assets/audio/windows-loading-audio.mp3" preload="auto"></audio>
+            <audio id="loadingAudio" src="/views/assets/audio/windows-loading-audio.mp3" preload="auto"></audio>
             <audio id="errorAudio" src="/views/assets/audio/windows-error-audio.mp3"></audio>
             <div class="desktop">
                 <div id="desktop-icons">
-                    <desktop-element imgpath="../assets/icons/app-icon-notes.png" name="Notes" app="notes"></desktop-element>
-                    <desktop-element imgpath="../assets/icons/app-icon-notes.png" name="Artikel" app="article"></desktop-element>
+                    <desktop-element imgpath="/views/assets/icons/app-icon-notes.png" name="Notes" app="notes"></desktop-element>
+                    <desktop-element imgpath="/views/assets/icons/app-icon-notes.png" name="Artikel" app="article"></desktop-element>
                 </div>
                 <div id="selectMarking"></div>
                 <div id="content">
