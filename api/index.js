@@ -1,3 +1,3 @@
 // ENTRY BACKEND
-import { Server } from "../api/Server.js";
+import { Server } from "../api/server.js";
 Server.handler();
