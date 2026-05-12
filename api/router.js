@@ -23,7 +23,7 @@ class apiRouter {
             path.endsWith(".ttf") ||
             path.endsWith(".ico") ||
             path.endsWith(".jpg") || path.endsWith(".jpeg")
-        ) return await this.serveStatic(path);
+        ) return await this.serveStatic(`korporate-website/client${path}`);
 
         // DEFAULT 
         return new Response("Page Not Found", { status: 404 });
