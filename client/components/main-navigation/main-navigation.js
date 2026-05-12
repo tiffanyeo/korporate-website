@@ -133,19 +133,19 @@ export class MainNavigation extends HTMLElement {
         switch (page) {
 
             case "about":
-                ClientRouter.setNewURL("/home/about");
+                ClientRouter.setNewURL("/about");
                 break;
 
             case "news":
-                ClientRouter.setNewURL("/home/news");
+                ClientRouter.setNewURL("/news");
                 break;
 
             case "contact":
-                ClientRouter.setNewURL("/home/contact");
+                ClientRouter.setNewURL("/contact");
                 break;
 
             case "intranet":
-                ClientRouter.setNewURL("/home/intranet");
+                ClientRouter.setNewURL("/intranet");
                 break;
 
             default:

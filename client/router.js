@@ -10,7 +10,7 @@ class clientRouter {
         const path = window.location.pathname;
         console.log(path);
 
-        if (path.startsWith("/home")) {
+        if (path.startsWith("/")) {
             switch (path) {
                 case "/":
                     content.innerHTML = "<about-view></about-view>";
