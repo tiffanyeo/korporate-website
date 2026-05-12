@@ -18,8 +18,8 @@ export class DesktopElement extends HTMLElement{
                 content.appendChild(document.createElement("notes-app"));
             }
 
-            if (app === "explorer") {
-                content.appendChild(document.createElement("explorer-app"));
+            if (app === "article") {
+                content.appendChild(document.createElement("article-app"));
             }
         }))
 
