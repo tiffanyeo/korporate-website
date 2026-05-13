@@ -50,6 +50,7 @@ export class StaffCardContainerElem extends HTMLElement {
                     border-radius: 4px;
                     background-color: lightblue;
                     margin-left: 20px;
+                    object-fit: cover;
                 }
 
                 .staff-quote {

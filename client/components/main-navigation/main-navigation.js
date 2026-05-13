@@ -25,8 +25,8 @@ export class MainNavigation extends HTMLElement {
             }
 
             .button-container {
-                width: 100%;
-                padding: 0 20px;
+                box-sizing: border-box;
+                width: 330px;
                 display: flex;
                 justify-content: space-around;
             }

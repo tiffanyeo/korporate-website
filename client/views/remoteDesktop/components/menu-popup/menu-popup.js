@@ -49,7 +49,7 @@ export class MenuPopup extends HTMLElement{
             .user-icon{
                 width: 40px;
                 height: 40px;
-                background-image: url(views/assets/icons/chess.jpeg);
+                background-image: url(views/assets/icons/Korpo.jpeg);
                 background-size: cover;
                 background-position: center;
                 border-radius: 2px;

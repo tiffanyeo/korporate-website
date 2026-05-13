@@ -16,7 +16,7 @@ export class HeaderElem extends HTMLElement {
         this.shadowRoot.innerHTML = `
             <style>
                 .header-comp {
-                    height: 100px;
+                    height: 130px;
                     background-color: var(--color-blue-100);
                     display: flex;
                     flex-direction: row;
@@ -25,7 +25,8 @@ export class HeaderElem extends HTMLElement {
                 .logo {
                     display: flex;
                     align-items: center;
-                    margin: 20px;
+                    margin: 30px 20px 20px;
+                    height: 20px;
                     border: 2px solid var(--color-blue-160);
                     border-radius: 5px;
                     padding: 20px 10px
