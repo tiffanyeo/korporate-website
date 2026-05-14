@@ -1,8 +1,7 @@
 
-import "./components/sign-out-elem/sign-in-elem.js"
-import "./components/about/about.js"
 
 class StaffIntranet extends HTMLElement {
+    
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
@@ -15,42 +14,25 @@ class StaffIntranet extends HTMLElement {
     renderSub() {
         setTimeout(() => {
             this.shadowRoot.getElementById('myNav').buttons = [
-                { title: 'Intranet', href: 'intranet' }
+                { title: 'Nyheter', href: 'nyheter' },
+                { title: 'Min avdelning', href: 'avdelning' },
             ];
             this.eListeners();
+            this.toggleContent("nyheter");
         }, 0);
     }
-    
+
     style() {
         return `
-        
-            body {
-                margin: 0;
-                padding: 0;
-                background-color: #222;
-                /* bakgrund runt mobilen */
-                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            }
-
-            main {
-                /* iPhone Pro Max */
-                max-width: 430px;
-                min-height: 932px;
-                /* iPhone Pro Max */
-                margin: 0px auto;
-                background-color: blue;
-                box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-            }
-            
-        
             #container{
                 margin: 0 30px;
-                background: var(--color-gray-100);
+                background: yellow;
                 padding: 16px;
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
             }
+                
             h1{
                 margin: 0;
                 font-size: 14px;
@@ -90,11 +72,10 @@ class StaffIntranet extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = `
         <style>${this.style()}</style>
+        <p>HEJSAN</p>
         <sub-navigation id="myNav"></sub-navigation>
         <div id="container">
-            <div class="content">
-                <about-intranet-view></about-intranet-view>
-            </div>
+   
         </div>
         `;
         this.renderSub();
@@ -109,28 +90,36 @@ class StaffIntranet extends HTMLElement {
         });
 
     }
-
+    
+    
     toggleContent(clickedBtn) {
 
-        const h1 = this.shadowRoot.querySelector("h1");
-        const parent = this.shadowRoot.querySelector(".content");
-        let childElem = ""
+        const container = this.shadowRoot.querySelector("#container");
 
         switch (clickedBtn) {
 
-            case "intranet":
-                h1.innerHTML = "Här loggar du in på vårt intranät";
-                childElem = "<sign-in-elem></sign-in-elem>";
-                parent.innerHTML = `${childElem}`;
+            case "nyheter":
+                container.innerHTML = `
+                    <div class="blue">
+                        <h1>Nyheter</h1>
+                    </div>
+                    <div class="two">
+                    </div>
+                `;
+                break;
+
+            case "avdelning":
+                container.innerHTML = `
+                    <billboard-view></billboard-view>
+                `;
                 break;
 
             default:
-                h1.innerHTML = "Här loggar du in på vårt intranät";
-                childElem = "<sign-in-elem></sign-in-elem>";
-                parent.innerHTML = `${childElem}`;
-                break;
+                container.innerHTML = ``;
+                
         }
     }
+
 
 }
 customElements.define("staff-intranet-view", StaffIntranet);

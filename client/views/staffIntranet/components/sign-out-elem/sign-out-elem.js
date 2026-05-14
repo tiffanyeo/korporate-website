@@ -1,7 +1,7 @@
 
 import { ClientRouter } from "../../../../router.js"
 
-export class SignInElem extends HTMLElement {
+export class SignOutElem extends HTMLElement {
 
     constructor() {
         super();
@@ -115,4 +115,4 @@ export class SignInElem extends HTMLElement {
 
 }
 
-customElements.define("sign-in-elem", SignInElem);
+customElements.define("sign-out-elem", SignOutElem);

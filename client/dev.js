@@ -17,18 +17,3 @@ import "./views/staffIntranet/components/billboard/billboard.js"
 // COMPONENTS VIEW SPECIFIC (move later?)
 import "./components/staff-card-container-elem/staff-card-container-elem.js"
 import "./views/about/about.js"
-
-
-
-/*
-window.addEventListener("DOMContentLoaded", () => {
-    document.getElementById('myNav').buttons = [
-        { title: 'Start', href: '/' },
-        { title: 'Våra tjänster' }
-    ]});
-
-*/
-
-import { ClientRouter } from "./router.js";
-window.addEventListener("load", () =>   ClientRouter.handleRoute());
-window.addEventListener("popstate", () => ClientRouter.handleRoute());
