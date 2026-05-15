@@ -14,7 +14,6 @@ export class ArticleApp extends HTMLElement{
         const maxi = this.shadowRoot.querySelector("#maximize");
         const close = this.shadowRoot.querySelector("#close");
 
-        const window = this.shadowRoot.querySelector("#notes");
         
         close.addEventListener("click", () => {
             this.remove();
@@ -29,20 +28,6 @@ export class ArticleApp extends HTMLElement{
         })
 
     }
-    riddle(){
-        const text = `<b>“Tidigare anställda vittnar: "Vi blev kontrollerade”</b>\n\nEn anonym källa har läckt information om att ett företag i namnet Korprate under flera års tid har varit inblandad i en omfattande kriminell verksamhet. Enligt uppgifter handlar det om penningtvätt i flera länder där stora summor pengar har först genom legitima affärsverksamheter.\n
-Flertalet tidigare anställda vittnar om en intern kultur som präglas av rädsla, hot och intern kontroll. I intervjuer framkommer det hur medarbetarna blivit utsatta för utpressning där ledningen samlat information om sina medarbetare som senare använts för att utöva påtryckningar och säkerställa lojalitet.\n
-\t-<i>"Det var alltid frivilligt att stanna. När du väl var inne fanns det ingen utväg eftersom de hade tillgång till all min privata information som användes som verktyg för utpressning”</i> Säger en tidigare anställd från Koprate.\n
-Utredare misstänker även att företaget varit inblandat i utpressning mot externa parter där hot förekommit om ekonomisk utpressning samt offentlig exponering av information.\n
--<i>"När du väl ser symbolen är det redan för sent”</i>
-Ingen vet hur långt deras verksamhet sträcker sig, men en sak som återkommer i varje fall är en symbol, en markering och ett namn.\n
-Trots allvarliga anklagelser nekar Korprate till samtliga påståenden och hävdar att informationen och dokumenten är manipulerade. Samtidigt fortsätter nya dokument att dyka upp med kontinuerliga bevis som tyder på att påståendena stämmer. Myndigheter i flera länder har för nuvarande inlett nya granskningar mot företaget. 
-`
-        
-        return text;
-        }
-
-
 
     render(){
         this.shadowRoot.innerHTML = `
@@ -204,17 +189,7 @@ Trots allvarliga anklagelser nekar Korprate till samtliga påståenden och hävd
                             <button id="close"aria-label="Close"></button>
                         </div>
                     </div>
-                    <div class="window-menu">
-                        <div class="window-menu-item">File</div>
-                        <div class="window-menu-item">Edit</div>
-                        <div class="window-menu-item">Format</div>
-                        <div class="window-menu-item">View</div>
-                        <div class="window-menu-item">Help</div>
-                    </div>
-                    <div class="window-body">
-                    <div id="input-box">
-                        <div id="addText" class="editor" contenteditable="true">${this.riddle()}</div>
-                    </div>
+                    <img src="views/assets/images/placeholder.png">
                   </div>
                 </div>
             </div>

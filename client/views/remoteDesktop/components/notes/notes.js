@@ -102,11 +102,16 @@ export class NotesApp extends HTMLElement{
                     outline: none;
                 }
                 
-                button[aria-label="Minimize"] {
-                    background-image: url(views/assets/icons/MinimizeWindow.png);
+                button{
+                    position: relative;
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
+                }
+
+                button[aria-label="Minimize"] {
+                    background-image: url(views/assets/icons/MinimizeWindow.png);
+
                 }
                 button[aria-label="Maximize"] {
                     background-image: url(views/assets/icons/MaximizeWindow.png);
@@ -119,6 +124,17 @@ export class NotesApp extends HTMLElement{
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
+                }
+                button .overlay{
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(255, 255, 255, 0.14);
+                    opacity: 0;
+                    transition: opacity 120ms ease;
+                    pointer-events: none;
+                }
+                button:hover .overlay{
+                    opacity: 1;
                 }
 
                 
@@ -192,9 +208,9 @@ export class NotesApp extends HTMLElement{
                     <div class="title-bar">
                         <div class="title-bar-text">Untitled - Notepad</div>
                         <div class="title-bar-controls">
-                            <button id="minimize"aria-label="Minimize"><div></div></button>
-                            <button id="maximize"aria-label="Maximize"></button>
-                            <button id="close"aria-label="Close"></button>
+                            <button id="minimize"aria-label="Minimize"><div class="overlay"></div></button>
+                            <button id="maximize"aria-label="Maximize"><div class="overlay"></div></button>
+                            <button id="close"aria-label="Close"><div class="overlay"></div></button>
                         </div>
                     </div>
                     <div class="window-menu">
