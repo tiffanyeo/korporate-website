@@ -11,7 +11,6 @@ import "./components/main-navigation/main-navigation.js";
 import "./components/sub-navigation/sub-navigation.js";
 
 import "./views/staffIntranet/components/sign-out-elem/sign-out-elem.js"
-import "./views/staffIntranet/components/about-intranet/about-intranet.js"
 import "./views/staffIntranet/components/billboard/billboard.js"
 
 // COMPONENTS VIEW SPECIFIC (move later?)
