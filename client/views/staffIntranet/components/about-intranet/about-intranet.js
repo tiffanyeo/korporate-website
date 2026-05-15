@@ -25,7 +25,7 @@ class AboutIntranetView extends HTMLElement {
                 { title: 'Min avdelning', href: 'avdelning' },
             ];
             this.eListeners();
-            this.toggleContent("about");
+            this.toggleContent("nyheter");
         }, 0);
     }
 
@@ -96,7 +96,7 @@ class AboutIntranetView extends HTMLElement {
 
         const container = this.shadowRoot.querySelector("#container");
 
-        switch (clickedBtn) {
+/*         switch (clickedBtn) {
 
             case "nyheter":
                 container.innerHTML = `
@@ -126,7 +126,7 @@ class AboutIntranetView extends HTMLElement {
             default:
                 container.innerHTML = `DEFAULT`;
 
-        }
+        } */
     }
 }
 

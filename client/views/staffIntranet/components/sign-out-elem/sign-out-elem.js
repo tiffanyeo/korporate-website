@@ -69,7 +69,7 @@ export class SignOutElem extends HTMLElement {
     }
     
     render() {
-        this.shadowRoot.innerHTML = `
+        /* this.shadowRoot.innerHTML = `
             <style>${this.style()}</style>
             
             <div class="login-window">
@@ -94,7 +94,7 @@ export class SignOutElem extends HTMLElement {
                 </div>
                 
             </div>
-        `;
+        `; */
     }
 
     eListeners() {
@@ -102,13 +102,13 @@ export class SignOutElem extends HTMLElement {
         const btn = this.shadowRoot.querySelector(".btn-sign-in");
 
         // SIGN-IN
-        btn.addEventListener("click", () => {
+/*         btn.addEventListener("click", () => {
             const path = "/remoteDesktop";
             const employee = this.shadowRoot.querySelector("#employee").value;
             const pwd = this.shadowRoot.querySelector("#pwd").value;
             if (employee == "carl" && pwd == "PISA") ClientRouter.setNewURL(path);
             console.log("CHANGING URL", path)
-        })
+        }) */
         
     }
 
