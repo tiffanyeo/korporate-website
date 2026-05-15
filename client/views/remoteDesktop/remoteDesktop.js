@@ -83,7 +83,6 @@ class RemoteDesktopView extends HTMLElement {
             <div class="desktop">
                 <div id="desktop-icons">
                     <desktop-element imgpath="/views/assets/icons/app-icon-notes.png" name="Notes" app="notes"></desktop-element>
-                    <desktop-element imgpath="/views/assets/icons/app-icon-notes.png" name="Artikel" app="article"></desktop-element>
                 </div>
                 <div id="selectMarking"></div>
                 <div id="content">
