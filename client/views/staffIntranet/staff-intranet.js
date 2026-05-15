@@ -91,7 +91,6 @@ class StaffIntranet extends HTMLElement {
 
     }
     
-    
     toggleContent(clickedBtn) {
 
         const container = this.shadowRoot.querySelector("#container");
@@ -110,8 +109,11 @@ class StaffIntranet extends HTMLElement {
 
             case "avdelning":
                 container.innerHTML = `
-                    <billboard-view></billboard-view>
+                    
                 `;
+/*                 container.innerHTML = `
+                    <billboard-view></billboard-view>
+                `; */
                 break;
 
             default:

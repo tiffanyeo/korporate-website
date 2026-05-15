@@ -1,36 +1,37 @@
 
-class BillboardView extends HTMLElement{
-    constructor(){
+class BillboardView extends HTMLElement {
+
+    constructor() {
         super();
         this.attachShadow({ mode: "open" });
     }
 
-    connectedCallback(){
+    connectedCallback() {
         this.render();
     }
 
     style() {
         return `
-            h1{
+            h1 {
                 margin: 0;
                 font-size: 14px;
                 text-align: center;
             }
-            h3{
+            h3 {
                 font-size: 11px;
                 margin: 0;
             }
             .wide {
                 letter-spacing: 12%;
             }
-            .thin{
+            .thin {
                 font-weight: 100;
             }
-            p{
+            p {
                 margin: 0;
                 font-size: 10px;
             }
-            .value{
+            .value {
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
@@ -38,7 +39,7 @@ class BillboardView extends HTMLElement{
         `;
     }
 
-    render(){
+    render() {
         this.shadowRoot.innerHTML = `
         
             <style>${this.style()}</style>
@@ -49,7 +50,7 @@ class BillboardView extends HTMLElement{
         
         `;
     }
-    
+
 
 }
 
