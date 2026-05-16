@@ -82,7 +82,7 @@ export class StaffCardContainerElem extends HTMLElement {
                         <div class="staff-info">
                             <h4 class="staff-title">VD</h4>
                             <p class="staff-name">Carl Nielsen</p>
-                            <p class="staff-start-year">1978</p>
+                            <p class="staff-start-year">carl.nielsen.korporate@gmail.com</p>
                             <p class="staff-quote">"Jag jobbar inte med att bygga affärsmöjligheter, det är viktigt för mig att bygga relationer med mina kunder."</p>
                         </div>
                         <div class="staff-image-quote-container">
@@ -99,7 +99,7 @@ export class StaffCardContainerElem extends HTMLElement {
                         <div class="staff-info">
                             <h4 class="staff-title">Assistent</h4>
                             <p class="staff-name">Sandra Pterov</p>
-                            <p class="staff-start-year">1999</p>
+                            <p class="staff-start-year">sandra.pterov.korporate@gmail.com</p>
                             <p class="staff-quote">"Jag tror att de bästa resultaten skapas genom struktur, kommunikation och ett genuint engagemang i människorna omkring oss."</p>
                         </div>
                         <div class="staff-image-quote-container">
@@ -116,7 +116,7 @@ export class StaffCardContainerElem extends HTMLElement {
                         <div class="staff-info">
                             <h4 class="staff-title">Ekonomi</h4>
                             <p class="staff-name">Irma Nagy</p>
-                            <p class="staff-start-year">2003</p>
+                            <p class="staff-start-year">irma.nagy.korporate@gmail.com</p>
                             <p class="staff-quote">"För mig handlar ekonomi inte bara om siffror.. Det handlar om att skapa trygghet, struktur och hållbar utveckling för hela företaget"</p>
                         </div>
                         <div class="staff-image-quote-container">

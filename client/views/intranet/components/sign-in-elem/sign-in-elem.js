@@ -13,7 +13,7 @@ export class SignInElem extends HTMLElement {
         this.eListeners();
     }
 
-    style(){
+    style() {
         return `
             .login-window {
                 background-color: lightgray;
@@ -67,7 +67,7 @@ export class SignInElem extends HTMLElement {
             }
         `;
     }
-    
+
     render() {
         this.shadowRoot.innerHTML = `
             <style>${this.style()}</style>
@@ -76,23 +76,19 @@ export class SignInElem extends HTMLElement {
                 <h3>Korporate Intranät</h3>
                 
                 <div class="input-container">
-                    <label for="employee">Välj personal</label>
-                    <select name="employee" id="employee">
-                        <option class="opt-val" value="old">OLD not in use</option>
-                        <option class="opt-val" value="carl">Carl Nielsen</option>
-                        <option class="opt-val" value="sandra">Sandra Pterov</option>
-                        <option class="opt-val" value="old">Not in use</option>
-                    </select>
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="Enter your email">
+
+                    <label for="pwd">Lösenord</label>
                     <input id="pwd" type="password" placeholder="Enter your password">
                 </div>
                 
                 <div class="btn-symbol-container">
                     <button class="btn-sign-in">Sign in</button>
                     <div class="icon-container">
-                        <img class="icon-img" src="/views/assets/icons/antivirus.png" alt="">
+                        <img class="icon-img" src="/views/assets/icons/antivirus.png" alt="ICON">
                     </div>
                 </div>
-                
             </div>
         `;
     }
@@ -103,13 +99,28 @@ export class SignInElem extends HTMLElement {
 
         // SIGN-IN
         btn.addEventListener("click", () => {
-            const path = "/remoteDesktop";
-            const employee = this.shadowRoot.querySelector("#employee").value;
-            const pwd = this.shadowRoot.querySelector("#pwd").value;
-            if (employee == "carl" && pwd == "PISA") ClientRouter.setNewURL(path);
-            console.log("CHANGING URL", path)
+
+            // const path1 = "/remoteDesktop";
+            const path1 = "/staffIntranet";
+            const path2 = "/staffIntranetCEO";
+            const email = this.shadowRoot.querySelector("#email").value.toLowerCase();
+            const pwd = this.shadowRoot.querySelector("#pwd").value.toLowerCase();
+
+            // SANDRA + IRMA INTRANET
+            if (
+                email === "irma.nagy.korporate@gmail.com" ||
+                email === "sandra.pterov.korporate@gmail.com" &&
+                pwd === "pisa") {ClientRouter.setNewURL(path1); console.log("PATH", path1)};
+
+            // CARL INTRANET
+            if (email === "carl.nielsen.korporate@gmail.com" &&
+                pwd === "pisa"
+            ) {ClientRouter.setNewURL(path2); console.log("PATH", path2)};
+
+
+            console.log("FROM SIGNIN ELEM")
         })
-        
+
     }
 
 
