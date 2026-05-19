@@ -20,13 +20,40 @@
         }
 
         main {
-            /* iPhone Pro Max */
-            max-width: 430px;
-            min-height: 932px;
-            /* iPhone Pro Max */
             margin: 0px auto;
             background-color: white;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            height: 100vh;
+        }
+        footer {
+            padding: 10px;
+            position: absolute;
+            border-top: 1px solid var(--color-blue-50);
+            color: var(--color-gray-140);
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 1px;
+            font-size: 10px;
+        }
+        footer img {
+            width: 10px;
+            height: 10px;
+            opacity: 0.5;
+        }
+
+        @media (min-width: 992px) {
+            main {
+            /* iPhone Pro Max */
+            width: 100vw;
+            /* iPhone Pro Max */
+            }
+            #content{
+                margin: 0 auto;
+                width: 792px;
+            }
+            
         }
     </style>
 
@@ -37,7 +64,12 @@
         <div id="content">
             <about-view></about-view>
         </div>
+        <footer>
+            <p><img src="./views/assets/icons/Korporate Symbol 2.png"> Korporate</p>
+            
+        </footer>
     </main>
+
 
 
     <script type="module" src="index.js"></script>
