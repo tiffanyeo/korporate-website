@@ -89,7 +89,7 @@ class EndGame extends HTMLElement {
                         <p class="text ending">PS. Kom ihåg, lojalitet och sekretess är A och O! Vi hör av oss snart igen.
                         <p class="text ending">Ett stort tack från VD:n, Carl Nielsen</p>
                         <div class="icon-container">
-                            <img class="icon" src="../client/views/assets/icons/Korporate Symbol 2.png" alt="">
+                            <img class="icon" src="views/assets/icons/Korporate Symbol 2.png" alt="">
                         </div>
                     </div>
 
@@ -106,7 +106,7 @@ class EndGame extends HTMLElement {
                         </p>
                         <p class="text ending">Ha en bra dag, Korporate</p>
                         <div class="icon-container">
-                            <img class="icon" src="../client/views/assets/icons/Korporate Symbol 2.png" alt="">
+                            <img class="icon" src="/views/assets/icons/Korporate Symbol 2.png" alt="">
                         </div>
                     </div>
                     <p class=" text text-addon">PS. Du är nu medhjälpare i en illegal handling, då brevet innehöll en check på 2 miljoner kronor med tvättade pengar. Hoppsan! Bilden och uppgifterna vi har på dig kommer vi att behålla länge, så att kontakta polisen är INTE ett alternativ. Kolla dig riktigt noga över axeln framöver. Vi vet var du bor, vem du är och hur du ser ut. Du gjorde fel val.

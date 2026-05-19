@@ -70,12 +70,12 @@ class QRView extends HTMLElement {
 
             <div class="choices-container">
                 <div class="choices choice1">
-                    <img src="./views/assets/icons/app-icon-lock.png" class="choice-icon" alt="">
+                    <img src="/views/assets/icons/app-icon-lock.png" class="choice-icon" alt="">
                     <p class="btn-info-text">Jag slängde brevet i papperskorgen.</p>
 
                 </div>
                 <div class="choices choice2">
-                    <img src="./views/assets/icons/app-icon-lock.png" class="choice-icon" alt="">
+                    <img src="/views/assets/icons/app-icon-lock.png" class="choice-icon" alt="">
                     <p class="btn-info-text">Jag la brevet i brevlådan.</p>
                 </div>
             </div>
