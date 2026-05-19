@@ -110,15 +110,13 @@ export class SignInElem extends HTMLElement {
             if (
                 email === "irma.nagy.korporate@gmail.com" ||
                 email === "sandra.pterov.korporate@gmail.com" &&
-                pwd === "pisa") {ClientRouter.setNewURL(path1); console.log("PATH", path1)};
+                pwd === "pisa") {ClientRouter.setNewURL(path1);}
 
             // CARL INTRANET
             if (email === "carl.nielsen.korporate@gmail.com" &&
                 pwd === "pisa"
-            ) {ClientRouter.setNewURL(path2); console.log("PATH", path2)};
+            ) {ClientRouter.setNewURL(path2);};
 
-
-            console.log("FROM SIGNIN ELEM")
         })
 
     }

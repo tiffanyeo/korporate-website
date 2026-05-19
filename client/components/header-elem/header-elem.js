@@ -74,7 +74,6 @@ export class HeaderElem extends HTMLElement {
     }
     render() {
         if (this.isIntranet) {
-            console.log("---header is intranet----")
             this.shadowRoot.innerHTML = `
                 <style>${this.style()}</style>
     
@@ -86,7 +85,6 @@ export class HeaderElem extends HTMLElement {
                 </div>
             `;
         } else {
-            console.log("---header is not not intranet----")
             this.shadowRoot.innerHTML = `
                 <style>${this.style()}</style>
     

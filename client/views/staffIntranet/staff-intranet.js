@@ -16,7 +16,6 @@ class StaffIntranet extends HTMLElement {
 
     connectedCallback() {
         this.render();
-        console.log("SIGNED IN AS CEO?:", this.isCEO)
     }
 
     style() {

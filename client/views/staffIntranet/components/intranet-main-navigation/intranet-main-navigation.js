@@ -113,18 +113,9 @@ export class IntranetMainNav extends HTMLElement {
         navBtns.forEach(btn => {
 
             btn.addEventListener("click", () => {
-
                 const page = btn.dataset.page;
-
-                console.log("--Button presed: ", page, "isCEO:", this.isCEO)
-
-                // Update state
                 this.activePage = page;
-
-                // Route
                 this.routing(page);
-
-                // Re-render UI
                 this.render();
             });
 
@@ -137,7 +128,6 @@ export class IntranetMainNav extends HTMLElement {
         switch (page) {
 
             case "staffIntranet":
-                console.log("main nav staffIntranet")
                 if (this.isCEO) return ClientRouter.setNewURL("/staffIntranetCEO");
                 ClientRouter.setNewURL("/staffIntranet")
                 break;

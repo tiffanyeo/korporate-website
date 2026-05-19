@@ -27,7 +27,7 @@ export class StaffCardContainerElem extends HTMLElement {
                     display: flex;
                     flex-direction: column;
                     background-color: lightgray;
-                    padding: 10px 20px;
+                    padding: 20px 30px;
                     border-radius: 5px;
                 }
 
@@ -56,8 +56,8 @@ export class StaffCardContainerElem extends HTMLElement {
                 }
 
                 .staff-image {
-                    border: 2px solid rgb(21, 17, 59);
-                    width: 150px;
+                    border: 2px solid var(--color-blue-120);
+                    width: 130px;
                     border-radius: 4px;
                     background-color: lightblue;
                     object-fit: cover;
@@ -90,8 +90,8 @@ export class StaffCardContainerElem extends HTMLElement {
                 <div class="staff-card">
                     <div class="staff-position-container">
                         <div class="staff-info">
-                            <h4 class="staff-title">VD</h4>
-                            <p class="staff-name">Carl Nielsen</p>
+                            <h4 class="staff-title">Carl Nielsen</h4>
+                            <p class="staff-name">VD</p>
                             <p class="staff-start-year">carl.nielsen.korporate@gmail.com</p>
                             <p class="staff-quote">"Jag jobbar inte med att bygga affärsmöjligheter, det är viktigt för mig att bygga relationer med mina kunder."</p>
                         </div>
@@ -107,9 +107,9 @@ export class StaffCardContainerElem extends HTMLElement {
                 <div class="staff-card">
                     <div class="staff-position-container">
                         <div class="staff-info">
-                            <h4 class="staff-title">Assistent</h4>
-                            <p class="staff-name">Sandra Pterov</p>
-                            <p class="staff-start-year">sandra.pterov.korporate@gmail.com</p>
+                            <h4 class="staff-title">Sandra Petrov</h4>
+                            <p class="staff-name">Assistent</p>
+                            <p class="staff-start-year">sandra.petrov.korporate@gmail.com</p>
                             <p class="staff-quote">"Jag tror att de bästa resultaten skapas genom struktur, kommunikation och ett genuint engagemang i människorna omkring oss."</p>
                         </div>
                         <div class="staff-image-quote-container">
@@ -124,8 +124,8 @@ export class StaffCardContainerElem extends HTMLElement {
                 <div class="staff-card">
                     <div class="staff-position-container">
                         <div class="staff-info">
-                            <h4 class="staff-title">Ekonomi</h4>
-                            <p class="staff-name">Irma Nagy</p>
+                            <h4 class="staff-title">Irma Nagy</h4>
+                            <p class="staff-name">Ekonomi</p>
                             <p class="staff-start-year">irma.nagy.korporate@gmail.com</p>
                             <p class="staff-quote">"För mig handlar ekonomi inte bara om siffror.. Det handlar om att skapa trygghet, struktur och hållbar utveckling för hela företaget"</p>
                         </div>
