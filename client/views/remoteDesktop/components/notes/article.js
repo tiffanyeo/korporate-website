@@ -185,7 +185,6 @@ export class ArticleApp extends HTMLElement{
                 @media(max-width: 600px){
                     img{
                         max-width: 80vw;
-                        max-height: 80vh;
                     }
                 }
             </style>
