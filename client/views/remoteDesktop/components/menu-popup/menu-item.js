@@ -12,6 +12,13 @@ class MenuItem extends HTMLElement{
         this.render();
     }
 
+    setEList(){
+        const host = this.getRootNode().host;
+        const audio = host.shadowRoot.querySelector("#errorAudio");
+        audio.currentTime = 0;
+        audio.play();
+    }
+
     render(){
         this.shadowRoot.innerHTML = `
             <style>
@@ -19,6 +26,14 @@ class MenuItem extends HTMLElement{
                     display: flex;
                     gap: 6px;
                     align-items: center;
+                }
+                .item:hover{
+                    background-color: #0f61cb;
+                    .Names p{
+                        color: #FBFBFA;
+                    }
+
+                    
                 }
                 .img-Con{
                     background-image: url(${this.imgpath});

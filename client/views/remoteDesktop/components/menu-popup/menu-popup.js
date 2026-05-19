@@ -1,3 +1,4 @@
+//import { createHistogram } from "node:perf_hooks";
 import "./menu-item.js";
 
 export class MenuPopup extends HTMLElement{
@@ -8,6 +9,20 @@ export class MenuPopup extends HTMLElement{
 
     connectedCallback(){
         this.render();
+        this.setEList();
+    }
+    setEList(){
+        const host = this.getRootNode().host;
+        const hostParent = host.getRootNode().host;
+        const audio = hostParent.shadowRoot.querySelector("#errorAudio");
+
+        const allItems = this.querySelectorAll(".item");
+
+        allItems.forEach((item) => item.addEventListener("click", ()=>{
+            audio.currentTime = 0;
+            audio.play();
+            audio.currentTime = 0;
+        }))
     }
 
     render(){
@@ -31,7 +46,7 @@ export class MenuPopup extends HTMLElement{
                 align-items: center;
                 padding: 7px 8px;
                 gap: 8px;
-                color: white;
+                color: #FBFBFA;
                 background: linear-gradient(180deg,
                     rgba(9, 151, 255, 1) 0%,
                     rgba(0, 83, 238, 1) 8%,
@@ -120,6 +135,27 @@ export class MenuPopup extends HTMLElement{
                 width: 280px;
                 background-color: #e6faff;
             }
+            #ALLP{
+                border-top: 1px solid var(--color-gray-100);
+                margin-top: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 4px;
+                padding: 8px;
+                font-weight: bold;
+                font-size: 12px;
+
+                img{
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+
+            #ALLP:hover{
+                background-color: #0f61cb;
+                color: #FBFBFA;
+            }
         </style>
 
         <div id="menu">
@@ -130,8 +166,9 @@ export class MenuPopup extends HTMLElement{
             </div>
             <div class="menu-middle">
                 <div class="menu-middle-column" id="menu-middle-left">
-                    <menu-item app="Internet" name="Internet Explorer" imgpath="./views/assets/icons/app.icon-explorer.png"></menu-item>
-                    <menu-item app="Internet Spades" imgpath="./views/assets/icons/app-icon-spades-game.png"></menu-item>
+                    <menu-item class="item" app="Internet" name="Internet Explorer" imgpath="./views/assets/icons/app.icon-explorer.png"></menu-item>
+                    <menu-item class="item" app="Internet Spades" imgpath="./views/assets/icons/app-icon-spades-game.png"></menu-item>
+                    <div class="item" id="ALLP">All Programs <img src="./views/assets/icons/green-triangle.png"></div>
                 </div>
                 <div class="menu-middle-column" id="menu-middle-right"></div>
             </div>

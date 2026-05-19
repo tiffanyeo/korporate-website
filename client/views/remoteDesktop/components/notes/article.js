@@ -35,7 +35,7 @@ export class ArticleApp extends HTMLElement{
                 #notes{
                     z-index: 10;
                     position: absolute;
-                    top: 100px;
+                    top: 20px;
 
                 }
                 .window {
@@ -178,6 +178,10 @@ export class ArticleApp extends HTMLElement{
                     height: 30px;
                     overflow: hidden;
                 }
+                img{
+                    width: 500px;
+                    height: auto;
+                }
             </style>
             <div id="notes">
                 <div class="window">
@@ -189,7 +193,7 @@ export class ArticleApp extends HTMLElement{
                             <button id="close"aria-label="Close"></button>
                         </div>
                     </div>
-                    <img src="views/assets/images/placeholder.png">
+                    <img src="views/remoteDesktop/assets/images/article.jpg">
                   </div>
                 </div>
             </div>

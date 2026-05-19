@@ -26,14 +26,13 @@ class RemoteDesktopView extends HTMLElement {
 
             :host {
                 display: block;
-                font-family: LibreFranklin;
+                font-family: Tahoma;
             }
 
             .desktop {
-                max-width: 430px;
-                min-height: 932px;
+                min-height: 100vh;
                 background-image: url("/views/assets/images/windows-background.jpg");
-                background-size: auto 120%;
+                background-size: cover;
                 background-repeat: no-repeat;
                 background-position: right 69% top 0%;
                 position: relative;
