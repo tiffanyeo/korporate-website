@@ -26,7 +26,7 @@ class RemoteDesktopView extends HTMLElement {
 
             :host {
                 display: block;
-                font-family: Tahoma;
+                font-family: Tahoma, "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
             }
 
             .desktop {
