@@ -92,7 +92,9 @@ class RemoteDesktopView extends HTMLElement {
     }
 
     init() {
-        playAudio.loading(this.shadowRoot);
+        setTimeout(() => {
+            playAudio.loading(this.shadowRoot);
+        }, 200)
         selectionMarking(this.shadowRoot);
     }
 }

@@ -29,6 +29,7 @@ class IntranetView extends HTMLElement {
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
+                height: 100vh; 
             }
             h1{
                 margin: 0;
