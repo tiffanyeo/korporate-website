@@ -183,9 +183,19 @@ export class ArticleApp extends HTMLElement{
                     width: auto;
                 }
                 @media(max-width: 600px){
-                    img{
-                        max-width: 90vw;
+                    .window {
+                        width: auto;
+                        max-width: 95vw;
+                        min-width: 70vw;
+                        margin: 10px auto;
                     }
+
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        display: block;
+                    }
+
 
 
                 }
