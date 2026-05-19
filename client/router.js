@@ -11,7 +11,7 @@ class clientRouter {
         const main = document.querySelector("main");
         const content = document.querySelector("#content");
         const path = window.location.pathname;
-
+        
         switch (path) {
             // CLEARS CONTENT
             case "/":
@@ -45,6 +45,15 @@ class clientRouter {
                 break;
             case "/remoteDesktop":
                 main.innerHTML = "<remote-desktop-view></remote-desktop-view>";
+                break;
+            case "/qr":
+                main.innerHTML = "<qr-view></qr-view>";
+                break;
+            case "/endgame-trash-can":
+                main.innerHTML = `<end-game-view isMailBoxEnding="false"</end-game-view>`;
+                break;
+            case "/endgame-mail-box":
+                main.innerHTML = `<end-game-view isMailBoxEnding="true"</end-game-view>`;
                 break;
 
             default:

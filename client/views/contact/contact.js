@@ -71,43 +71,44 @@ class ContactView extends HTMLElement {
             }
 
             input[type="text"],
-            select,
-            textarea {
-                width: 100%;
-                padding: 10px 12px;
-                font-size: 12px;
-                border-radius: 6px;
-                border: 1px solid var(--color-gray-40);
-                background: var(--color-gray-30);
-                color: var(--color-gray-0);
-                box-sizing: border-box;
-                transition: border-color 0.2s ease, box-shadow 0.2s ease;
-            }
+                select,
+                textarea {
+                    width: 100%;
+                    padding: 10px 12px;
+                    font-size: 12px;
+                    border-radius: 6px;
+                    border: 1px solid var(--color-gray-40);
+                    background: var(--color-gray-30);
+                    color: var(--color-gray-0);
+                    box-sizing: border-box;
+                    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+                }
 
-            input[type="text"]:focus,
-            select:focus,
-            textarea:focus {
-                border-color: var(--color-blue-120);
-                box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.25);
-                outline: none;
-            }
+                input[type="text"]:focus,
+                select:focus,
+                textarea:focus {
+                    border-color: var(--color-blue-120);
+                    box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.25);
+                    outline: none;
+                }
 
-            input[type="submit"] {
-                margin-top: 12px;
-                background: var(--color-blue-120);
-                color: var(--color-gray-100);
-                padding: 12px;
-                border: none;
-                border-radius: 6px;
-                font-size: 13px;
-                font-weight: 600;
-                cursor: pointer;
-                transition: background 0.2s ease;
-            }
+                .submit-btn {
+                    margin-top: 12px;
+                    background: var(--color-gray-120);
+                    color: var(--color-gray-100);
+                    padding: 12px;
+                    border: none;
+                    border-radius: 6px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: background 0.2s ease;
+                }
 
-            input[type="submit"]:hover {
-                background: var(--color-blue-140);
-            }
+                .no-msg {
+                    text-align: center;
+                    color: var(--color-gray-140);
+                }
         `;
     }
 
@@ -143,7 +144,9 @@ class ContactView extends HTMLElement {
                 <label for="subject">Subject</label>
                 <textarea id="subject" name="subject" placeholder="Ditt meddelande.." style="height:200px"></textarea>
 
-                <input type="submit" value="Submit">
+
+                <button disabled class="submit-btn">Skicka</button>
+                <p class="no-msg">Vi tar inte emot några förfrågningar just nu.</p>
 
             </form>
             </div>

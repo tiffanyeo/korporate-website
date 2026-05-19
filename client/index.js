@@ -5,6 +5,7 @@ import "./views/news/news.js"
 import "./views/contact/contact.js"
 import "./views/remoteDesktop/remoteDesktop.js"
 import "./views/staffIntranet/staff-intranet.js"
+import "./views/qr/qr.js"
 
 // COMPONENTS 
 import "./components/header-elem/header-elem.js";
