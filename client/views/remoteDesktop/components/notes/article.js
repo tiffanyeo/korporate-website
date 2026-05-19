@@ -179,8 +179,14 @@ export class ArticleApp extends HTMLElement{
                     overflow: hidden;
                 }
                 img{
-                    width: 500px;
-                    height: auto;
+                    max-height: 80vh;
+                    width: auto;
+                }
+                @media(max-width: 600px){
+                    img{
+                        max-width: 80vw;
+                        max-height: 80vh;
+                    }
                 }
             </style>
             <div id="notes">
