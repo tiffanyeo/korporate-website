@@ -108,6 +108,7 @@ class AboutView extends HTMLElement {
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
+                color: var(--color-gray-160);
             }
             h1{
                 margin: 0;
@@ -122,7 +123,7 @@ class AboutView extends HTMLElement {
             }
             p{
                 margin: 0;
-                font-size: 12px;
+                font-size: 14px;
             }
             .blue{
                 margin: 0;
