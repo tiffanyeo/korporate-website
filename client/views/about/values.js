@@ -12,18 +12,10 @@ class ValuesView extends HTMLElement{
     render(){
         this.shadowRoot.innerHTML = `
         <style>
-            #container{
-                box-sizing: 
-                background: var(--color-gray-100);
-                padding: 24px;
-                display: flex;
-                flex-direction: column;
-                gap: 24px;
-            }
             h1{
                 margin: 0;
                 font-size: 14px;
-                text-align: center;
+
             }
             h3{
                 font-size: 11px;
@@ -34,19 +26,33 @@ class ValuesView extends HTMLElement{
             }
             .thin{
                 font-weight: 100;
+                margin: 24px auto;
+                text-align: center
             }
             p{
                 margin: 0;
                 font-size: 10px;
             }
-            .value{
+            .blue{
+                margin: 0;
+                background: var(--color-blue-120);
+                color: var(--color-gray-100);
+                padding: 16px;
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
             }
+
+            .value{
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                margin-bottom: 16px;
+            }
         </style>
-        <div id="container">
-            <h1 class="wide">Våra värden</h1>
+            <div class="blue">
+                <h1>Våra värden</h1>
+            </div>
             <h1 class="wide thin">Korporate har flera stadgar som är grundläggande för verksamheten</h2>
             <div class="value">
                 <h3 class="wide">Garanterad kundnöjdhet</h3>
@@ -64,7 +70,6 @@ class ValuesView extends HTMLElement{
                 <h3 class="wide">Ingen diskriminering</h3>
                 <p>Vi arbetar kontinueligt med noll tolerans för diskriminering på arbetsplatsen. Korporate är en trakasserifri-zon som välkomnar alla.</p>
             </div>
-        </div>
         
         `;
     }
