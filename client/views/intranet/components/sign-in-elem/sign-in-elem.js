@@ -65,6 +65,10 @@ export class SignInElem extends HTMLElement {
                 margin-top: 12px;
                 max-width: 40px;
             }
+            .pwd-feedback {
+                text-align: center;
+                color: var(--color-blue-160);
+            }
         `;
     }
 
@@ -85,10 +89,13 @@ export class SignInElem extends HTMLElement {
                 
                 <div class="btn-symbol-container">
                     <button class="btn-sign-in">Sign in</button>
-                    <div class="icon-container">
-                        <img class="icon-img" src="/views/assets/icons/Korporate Symbol 2.png" alt="ICON">
-                    </div>
+                    <p class="pwd-feedback"></p>
                 </div>
+                
+                <div class="icon-container">
+                    <img class="icon-img" src="/views/assets/icons/Korporate Symbol 2.png" alt="ICON">
+                </div>
+                
             </div>
         `;
     }
@@ -109,14 +116,16 @@ export class SignInElem extends HTMLElement {
             // SANDRA + IRMA INTRANET
             if (
                 email === "irma.nagy.korporate@gmail.com" ||
-                email === "sandra.pterov.korporate@gmail.com" &&
-                pwd === "pisa") {ClientRouter.setNewURL(path1);}
+                email === "sandra.petrov.korporate@gmail.com" &&
+                pwd === "pisa") return ClientRouter.setNewURL(path1);
 
             // CARL INTRANET
             if (email === "carl.nielsen.korporate@gmail.com" &&
                 pwd === "pisa"
-            ) {ClientRouter.setNewURL(path2);};
+            ) return ClientRouter.setNewURL(path2);
 
+            const feedback = this.shadowRoot.querySelector(".pwd-feedback");
+            feedback.innerHTML = "Please try again."
         })
 
     }
