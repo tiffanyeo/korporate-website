@@ -38,10 +38,21 @@ export class StaffCardContainerElem extends HTMLElement {
                 .staff-position-container {
                     display: flex;
                     flex-direction: row;
+                    gap: 20px;
                 }
 
                 .staff-image-quote-container {
-                    display: flex;
+                    margin: 0;
+                }
+                @media (max-width: 600px){
+                    .staff-position-container {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .staff-image {
+                        width: 60px;
+                        margin-left: 0px;
+                    }
                 }
 
                 .staff-image {
@@ -49,7 +60,6 @@ export class StaffCardContainerElem extends HTMLElement {
                     width: 150px;
                     border-radius: 4px;
                     background-color: lightblue;
-                    margin-left: 20px;
                     object-fit: cover;
                 }
 

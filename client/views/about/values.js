@@ -18,7 +18,6 @@ class ValuesView extends HTMLElement{
 
             }
             h3{
-                font-size: 11px;
                 margin: 0;
             }
             .wide {
@@ -30,8 +29,8 @@ class ValuesView extends HTMLElement{
                 text-align: center
             }
             p{
-                margin: 0;
-                font-size: 10px;
+                margin: 0 1px;
+                font-size: 12px;
             }
             .blue{
                 margin: 0;
@@ -44,6 +43,7 @@ class ValuesView extends HTMLElement{
             }
 
             .value{
+                font-size: 12px;
                 display: flex;
                 flex-direction: column;
                 gap: 4px;
@@ -55,19 +55,19 @@ class ValuesView extends HTMLElement{
             </div>
             <h1 class="wide thin">Korporate har flera stadgar som är grundläggande för verksamheten</h2>
             <div class="value">
-                <h3 class="wide">Garanterad kundnöjdhet</h3>
+                <h3>Garanterad kundnöjdhet</h3>
                 <p>Vi fokuserar alltid på att göra kunden nöjd.</p>
             </div>
             <div class="value">
-                <h3 class="wide">Utvärderar ständigt</h3>
+                <h3>Utvärderar ständigt</h3>
                 <p>Korporate utvärderar alla sina case efter utförandet för att granska utfallen för bäst resultat.</p>
             </div>
             <div class="value">
-                <h3 class="wide">Bäst pris</h3>
-                <p>Våra tjänster är prissatta bäst på marknaden för ultimata resultat.</p>
+                <h3>Bäst pris</h3>
+                <p> Våra tjänster är prissatta bäst på marknaden för ultimata resultat.</p>
             </div>
             <div class="value">
-                <h3 class="wide">Ingen diskriminering</h3>
+                <h3>Ingen diskriminering</h3>
                 <p>Vi arbetar kontinueligt med noll tolerans för diskriminering på arbetsplatsen. Korporate är en trakasserifri-zon som välkomnar alla.</p>
             </div>
         
