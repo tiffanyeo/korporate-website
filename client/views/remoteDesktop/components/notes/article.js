@@ -39,7 +39,7 @@ export class ArticleApp extends HTMLElement{
 
                 }
                 .window {
-                    margin: 8px;
+                    margin: 10px 8px;
                     width: fit-content;
                     font-size: 11px;
                     border: 2px solid rgba(0, 102, 255, 1);
@@ -184,8 +184,10 @@ export class ArticleApp extends HTMLElement{
                 }
                 @media(max-width: 600px){
                     img{
-                        max-width: 80vw;
+                        max-width: 90vw;
                     }
+
+
                 }
             </style>
             <div id="notes">
