@@ -80,7 +80,7 @@ export class HeaderElem extends HTMLElement {
                 <div class="header-comp">
                     <div class="logo">
                         <p class="logo-text logo-text-k">K</p>
-                        <p class="logo-text logo-text-orporate">orporate Intranet</p>
+                        <p class="logo-text logo-text-orporate">orporate Intranät</p>
                     </div>
                 </div>
             `;

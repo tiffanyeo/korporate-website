@@ -17,86 +17,100 @@
 
         main {
             min-height: 100vh;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            background-color: white;
         }
 
 
 
         /* QR */
-        #container {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: var(--color-blue-80);
-
-        }
-
-        .text-container {
-            max-height: 1200px;
-            min-height: 300px;
-            max-width: 800px;
-            min-width: 200px;
-            padding: 40px;
+        .login-window {
+            margin: 10px;
             box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.501);
             border-radius: 10px;
+            padding: 12px;
+        }
+
+        .login-window>h3 {
+            margin-top: 5px;
+        }
+
+        .input-container {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            margin: 20px;
-        }
-
-        .text {
-            font-weight: 500;
-            text-align: center;
-            color: #222;
-            line-height: 130%;
-        }
-
-        .text-intro {
-            margin-top: 40px;
-        }
-
-        .text-addon {
-            color: #222222b0;
-            font-weight: 400;
-            padding-top: 20px;
-            max-width: 600px;
-            line-height: 130%;
-        }
-
-        .ending {
-            font-style: italic;
+            gap: 8px;
         }
 
         .icon-container {
             display: flex;
             justify-content: center;
         }
-
-        .icon {
-            width: 150px;
+        
+        h3 {
+            color: var(--color-blue-160)
         }
 
+        input {
+            padding: 6px;
+        }
+
+        label {
+            color: var(--color-blue-160);
+        }
+
+        .btn-symbol-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn-sign-in {
+            margin-top: 8px;
+            height: min-content;
+            padding: 10px 20px;
+            color: var(--color-blue-160);
+            background-color: var(--color-purple-30);
+            border-radius: 8px;
+        }
+
+        .opt-val {
+            padding: 100px;
+        }
+
+        select {
+            padding: 6px;
+        }
+
+        .icon-img {
+            margin-top: 12px;
+            max-width: 40px;
+        }
+
+        .pwd-feedback {
+            text-align: center;
+            color: var(--color-blue-160);
+        }
     </style>
 </head>
 
 <body>
     <main>
-        <div id="container">
+        <div class="login-window">
+            <h3>Korporate Intranät</h3>
 
-            <div class="text-container">
+            <div class="input-container">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Enter your email">
 
-                <h1 class="text text-h1">Tack för ditt engagemang och lojalitet!</h1>
-                <p class="text text-intro">
-                    Du är den perfekta kandidaten för oss på Korporate. Lojalitet och sekretess är våra viktigaste ledord. Leveransen du valt att slutföra betyder mycket för oss. Du gjorde rätt val och är nu i trygga händer. Brevet innehöll en check på 2 miljoner kronor som vi nu lyckats dölja från polisen. Dina möjligheter är oändliga inom Korporate och vi ser fram emot vårt framtida samarbete.
-                </p>
-                <p class="text ending">PS. Kom ihåg, lojalitet och sekretess är A och O! Vi hör av oss snart igen.
-                <p class="text ending">Ett stort tack från VD:n, Carl Nielsen</p>
-                <div class="icon-container">
-                    <img class="icon" src="../client/views/assets/icons/Korporate Symbol 2.png" alt="">
-                </div>
+                <label for="pwd">Lösenord</label>
+                <input id="pwd" type="password" placeholder="Enter your password">
+            </div>
+
+            <div class="btn-symbol-container">
+                <p class="pwd-feedback"></p>
+                <button class="btn-sign-in">Sign in</button>
+            </div>
+
+            <div class="icon-container">
+                <img class="icon-img" src="/views/assets/icons/Korporate Symbol 2.png" alt="KORP">
             </div>
 
         </div>

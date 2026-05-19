@@ -16,7 +16,7 @@ export class SignInElem extends HTMLElement {
     style() {
         return `
             .login-window {
-                background-color: lightgray;
+                box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.501);
                 border-radius: 10px;
                 padding: 12px;
             }
@@ -88,8 +88,8 @@ export class SignInElem extends HTMLElement {
                 </div>
                 
                 <div class="btn-symbol-container">
-                    <button class="btn-sign-in">Sign in</button>
                     <p class="pwd-feedback"></p>
+                    <button class="btn-sign-in">Sign in</button>
                 </div>
                 
                 <div class="icon-container">
@@ -107,7 +107,6 @@ export class SignInElem extends HTMLElement {
         // SIGN-IN
         btn.addEventListener("click", () => {
 
-            // const path1 = "/remoteDesktop";
             const path1 = "/staffIntranet";
             const path2 = "/staffIntranetCEO";
             const email = this.shadowRoot.querySelector("#email").value.toLowerCase();
@@ -124,8 +123,10 @@ export class SignInElem extends HTMLElement {
                 pwd === "pisa"
             ) return ClientRouter.setNewURL(path2);
 
+            // WRONG PWD
             const feedback = this.shadowRoot.querySelector(".pwd-feedback");
-            feedback.innerHTML = "Please try again."
+            feedback.innerHTML = "Please try again.";
+            
         })
 
     }
