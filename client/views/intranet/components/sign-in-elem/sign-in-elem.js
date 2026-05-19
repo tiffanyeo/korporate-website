@@ -16,6 +16,7 @@ export class SignInElem extends HTMLElement {
     style() {
         return `
             .login-window {
+                margin: 10px;
                 box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.501);
                 border-radius: 10px;
                 padding: 12px;
@@ -30,6 +31,11 @@ export class SignInElem extends HTMLElement {
                 flex-direction: column;
                 gap: 8px;
             }
+
+            .icon-container {
+                display: flex;
+                justify-content: center;
+            }
             
             h3 {
                 color: var(--color-blue-160)
@@ -42,6 +48,7 @@ export class SignInElem extends HTMLElement {
             label {
                 color: var(--color-blue-160);
             }
+
             .btn-symbol-container {
                 display: flex;
                 justify-content: space-between;
@@ -50,7 +57,10 @@ export class SignInElem extends HTMLElement {
             .btn-sign-in {
                 margin-top: 8px;
                 height: min-content;
-                padding: 6px 8px;
+                padding: 10px 20px;
+                color: var(--color-blue-160);
+                background-color: var(--color-purple-30);
+                border-radius: 8px;
             }
 
             .opt-val {
@@ -60,11 +70,12 @@ export class SignInElem extends HTMLElement {
             select {
                 padding: 6px;
             }
-            
+
             .icon-img {
                 margin-top: 12px;
                 max-width: 40px;
             }
+
             .pwd-feedback {
                 text-align: center;
                 color: var(--color-blue-160);
@@ -75,10 +86,9 @@ export class SignInElem extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = `
             <style>${this.style()}</style>
-            
             <div class="login-window">
                 <h3>Korporate Intranät</h3>
-                
+
                 <div class="input-container">
                     <label for="email">Email</label>
                     <input id="email" type="email" placeholder="Enter your email">
@@ -86,16 +96,16 @@ export class SignInElem extends HTMLElement {
                     <label for="pwd">Lösenord</label>
                     <input id="pwd" type="password" placeholder="Enter your password">
                 </div>
-                
+
                 <div class="btn-symbol-container">
                     <p class="pwd-feedback"></p>
                     <button class="btn-sign-in">Sign in</button>
                 </div>
-                
+
                 <div class="icon-container">
-                    <img class="icon-img" src="/views/assets/icons/Korporate Symbol 2.png" alt="ICON">
+                    <img class="icon-img" src="/views/assets/icons/Korporate Symbol 2.png" alt="KORP">
                 </div>
-                
+
             </div>
         `;
     }
@@ -113,10 +123,12 @@ export class SignInElem extends HTMLElement {
             const pwd = this.shadowRoot.querySelector("#pwd").value.toLowerCase();
 
             // SANDRA + IRMA INTRANET
-            if (
+            if ((
                 email === "irma.nagy.korporate@gmail.com" ||
-                email === "sandra.petrov.korporate@gmail.com" &&
-                pwd === "pisa") return ClientRouter.setNewURL(path1);
+                email === "sandra.petrov.korporate@gmail.com"
+            )
+                && pwd === "pisa"
+            ) return ClientRouter.setNewURL(path1);
 
             // CARL INTRANET
             if (email === "carl.nielsen.korporate@gmail.com" &&
@@ -126,7 +138,9 @@ export class SignInElem extends HTMLElement {
             // WRONG PWD
             const feedback = this.shadowRoot.querySelector(".pwd-feedback");
             feedback.innerHTML = "Please try again.";
-            
+            this.shadowRoot.querySelector("#email").value = "";
+            this.shadowRoot.querySelector("#pwd").value = "";
+
         })
 
     }
