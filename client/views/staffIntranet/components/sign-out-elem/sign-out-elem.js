@@ -13,7 +13,7 @@ export class SignOutElem extends HTMLElement {
         this.eListeners();
     }
 
-    style(){
+    style() {
         return `
             .login-window {
                 background-color: lightgray;
@@ -67,51 +67,40 @@ export class SignOutElem extends HTMLElement {
             }
         `;
     }
-    
+
     render() {
-        /* this.shadowRoot.innerHTML = `
+        this.shadowRoot.innerHTML = `
             <style>${this.style()}</style>
-            
             <div class="login-window">
                 <h3>Korporate Intranät</h3>
-                
                 <div class="input-container">
-                    <label for="employee">Välj personal</label>
-                    <select name="employee" id="employee">
-                        <option class="opt-val" value="old">OLD not in use</option>
-                        <option class="opt-val" value="carl">Carl Nielsen</option>
-                        <option class="opt-val" value="sandra">Sandra Pterov</option>
-                        <option class="opt-val" value="old">Not in use</option>
-                    </select>
-                    <input id="pwd" type="password" placeholder="Enter your password">
+                    <button class="btn-sign-out">Logga ut</button>
                 </div>
-                
-                <div class="btn-symbol-container">
-                    <button class="btn-sign-in">Sign in</button>
-                    <div class="icon-container">
-                        <img class="icon-img" src="/views/assets/icons/antivirus.png" alt="">
-                    </div>
-                </div>
-                
             </div>
-        `; */
+        `;
     }
 
     eListeners() {
+        // SIGN-OUT
+        const btn = this.shadowRoot.querySelector(".btn-sign-out");
+        btn.addEventListener("click", () => {
 
-        const btn = this.shadowRoot.querySelector(".btn-sign-in");
+            // BUILD UP HTML FIRST
 
-        // SIGN-IN
-/*         btn.addEventListener("click", () => {
-            const path = "/remoteDesktop";
-            const employee = this.shadowRoot.querySelector("#employee").value;
-            const pwd = this.shadowRoot.querySelector("#pwd").value;
-            if (employee == "carl" && pwd == "PISA") ClientRouter.setNewURL(path);
-            console.log("CHANGING URL", path)
-        }) */
-        
+            const main = document.querySelector("main");
+
+            // 2. Bygg upp public-strukturen igen
+            main.innerHTML = `
+            <header-elem></header-elem>
+            <main-navigation></main-navigation>
+            <div id="content"></div>`;
+
+
+            const path = "/about";
+            ClientRouter.setNewURL(path)
+        })
+
     }
-
 
 }
 
