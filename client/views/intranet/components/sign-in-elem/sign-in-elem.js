@@ -59,7 +59,7 @@ export class SignInElem extends HTMLElement {
                 height: min-content;
                 padding: 10px 20px;
                 color: var(--color-blue-160);
-                background-color: var(--color-purple-30);
+                background-color: var(--color-blue-30);
                 border-radius: 8px;
             }
 
@@ -137,7 +137,7 @@ export class SignInElem extends HTMLElement {
 
             // WRONG PWD
             const feedback = this.shadowRoot.querySelector(".pwd-feedback");
-            feedback.innerHTML = "Please try again.";
+            feedback.innerHTML = "Något gick fel, prova igen.";
             this.shadowRoot.querySelector("#email").value = "";
             this.shadowRoot.querySelector("#pwd").value = "";
 
