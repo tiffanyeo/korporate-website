@@ -141,21 +141,15 @@ class MyPages extends HTMLElement {
                         </div>
 
                         <div class="message unread">
-                            <h4 class="title">Vi har koll på dig Mr. Carl.</h4>
+                            <h4 class="title">Security Alert</h4>
                             <div class="mailMeta">
-                                <span class="sender">unknown@hidden.net</span>
+                                <span class="sender">ops@korporate-internal.net</span>
                                 <span class="date">2026-04-11 02:47</span>
                             </div>
                             <p class="messageContent">
-                                Du verkar ha glömt kopplingen mellan din gamla dator och din nya?<br><br>
-
-                                Den må samla damm på vinden men allt gick att spåra genom den. Täpper du inte till dina läckor bättre än så?<br><br>
-
-                                Vi har haft full åtkomst till dina filer, kameror och konton längre än du tror. Dina “affärer” har vi haft full insyn i länge. Frågan är bara vem som får informationen först.<br><br>
-
-                                Var på tårna.
+                            We noticed an unusual sign-in to your remote connection. If this was not you your data may have been exposed. 
                             </p>
-                            <button class="hackButton"> We already took over your computer </button>
+                            <button class="hackButton">Sign in</button>
 
                         </div>
 
