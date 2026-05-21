@@ -12,13 +12,6 @@ class MenuItem extends HTMLElement{
         this.render();
     }
 
-    setEList(){
-        const host = this.getRootNode().host;
-        const audio = host.shadowRoot.querySelector("#errorAudio");
-        audio.currentTime = 0;
-        audio.play();
-    }
-
     render(){
         this.shadowRoot.innerHTML = `
             <style>

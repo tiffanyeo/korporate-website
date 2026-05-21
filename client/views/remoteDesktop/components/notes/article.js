@@ -203,7 +203,7 @@ export class ArticleApp extends HTMLElement{
             <div id="notes">
                 <div class="window">
                     <div class="title-bar">
-                        <div class="title-bar-text">Artikel - Notepad</div>
+                        <div class="title-bar-text">WARNING</div>
                         <div class="title-bar-controls">
                             <button id="minimize"aria-label="Minimize"><div></div></button>
                             <button id="maximize"aria-label="Maximize"></button>
