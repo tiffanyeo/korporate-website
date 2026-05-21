@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Korporate</title>
     <style>
-        
         body {
             background-color: #b0d6f3;
             box-sizing: border-box;
@@ -17,7 +16,6 @@
         }
 
         #container {
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -72,6 +70,35 @@
         .icon {
             width: 150px;
         }
+
+        @media (max-width: 750px) {
+
+            body {
+                max-height: 100vh;
+            }
+
+            .text-info {
+                margin-top: 50px;
+            }
+
+            .korporate-icon {
+                margin-top: 20px;
+            }
+
+            .choices-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .korporate-icon {
+                width: 0px;
+            }
+
+            .choices {
+                max-height: 100px;
+                max-width: 100px;
+            }
+        }
     </style>
 </head>
 
@@ -88,7 +115,7 @@
         <p class="text-addon">Du gjorde fel val.</p>
     </div>
     <div class="icon-container">
-        <img src="./korporare.png" class="icon" alt="">
+        <img src="./korporare.png" class="icon" class="korporate-icon" alt="">
     </div>
 </body>
 

@@ -7,14 +7,13 @@
     <title>Korporate</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* UPPD. */
         #container {
-            min-height: 100vh;
+            min-height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #5999CB;
-
         }
 
         .text {
@@ -61,7 +60,36 @@
         .korporate-icon {
             width: 150px;
             margin-top: 100px;
+        }
 
+        /* UPPD. */
+        @media (max-width: 750px) {
+
+            body {
+                max-height: 100vh;
+            }
+
+            .text-info {
+                margin-top: 50px;
+            }
+
+            .korporate-icon {
+                margin-top: 20px;
+            }
+
+            .choices-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .korporate-icon {
+                width: 80px;
+            }
+
+            .choices {
+                max-height: 100px;
+                max-width: 100px;
+            }
         }
     </style>
 </head>
