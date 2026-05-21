@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEVELOPMENT</title>
+    <title>Korporate</title>
     <link rel="stylesheet" href="style.css">
     <style>
         #container {
@@ -13,7 +13,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: var(--color-blue-80);
+            background-color: #5999CB;
 
         }
 
@@ -34,20 +34,34 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #4988b8;
+            background-color: #BDBBB6;
             border-radius: 10px;
             padding: 20px;
-            height: 200px;
-            width: 270px;
+            min-height: 150px;
+            min-width: 200px;
+            max-height: 200px;
+            max-width: 270px;
             box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.501);
         }
 
         .choices:hover {
-            background-color: var(--color-blue-120);
+            background-color: #8E8C89;
         }
 
         .choice-icon {
+            max-width: 100px;
+            min-height: 50px;
+        }
+
+        .korporate-icon-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .korporate-icon {
             width: 150px;
+            margin-top: 100px;
+
         }
     </style>
 </head>
@@ -62,18 +76,18 @@
 
         <div class="choices-container">
             <div class="choices choice1">
-                <img src="/views/assets/icons/app-icon-lock.png" class="choice-icon" alt="">
+                <img src="./icon-trash.png" class="choice-icon" alt="">
                 <p class="btn-info-text">Jag slängde brevet i papperskorgen.</p>
 
             </div>
             <div class="choices choice2">
-                <img src="/views/assets/icons/app-icon-lock.png" class="choice-icon" alt="">
+                <img src="./icon-mail.png" class="choice-icon" alt="">
                 <p class="btn-info-text">Jag la brevet i brevlådan.</p>
             </div>
         </div>
-        
-        <div>
-            <img src="." alt="">
+
+        <div class="korporate-icon">
+            <img class="korporate-icon" src="./korporare.png" alt="">
         </div>
     </div>
     <script type="module" src="./dev.js"></script>
