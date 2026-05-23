@@ -1,11 +1,13 @@
-
+const container = document.querySelector("#container")
 // EVENT-LISTEBER
-const btnTrashCan = this.shadowRoot.querySelector(".choice1");
-btnTrashCan.addEventlistener("click", () => {
+const btnTrashCan = document.querySelector(".choice1");
+btnTrashCan.addEventListener("click", () => {
     // load html 1
+    window.location.href = "choice1.html";
 })
 
-const btnMailBox = this.shadowRoot.querySelector(".choice1");
-btnMailBox.addEventlistener("click", () => {
+const btnMailBox = document.querySelector(".choice2");
+btnMailBox.addEventListener("click", () => {
     // load html 2
+    window.location.href = "choice2.html";
 })
